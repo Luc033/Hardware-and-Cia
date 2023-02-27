@@ -19,14 +19,13 @@ body {
 .header-principal {
     background-color: #F95738;
     width: 100%;
-    text-align: center;
+    justify-content: space-around;
     vertical-align: middle;
-    padding: 15px 40px 10px 25px;
+    padding: 15px 10px 10px 10px;
     display: flexbox;
-    align-items: center; 
-    justify-content: center;
-    
+
 }
+
 .logo-header {
     width: 10%;
     height: 10%;
@@ -35,28 +34,45 @@ body {
 
 .form-search-header {
     display: inline-block;
-    padding: 0 100px 0 30px;
-    vertical-align:  middle;
+    padding: 0 25px 0 10px;
+    vertical-align: middle;
+
 
 }
-.a-il-ul-nav-header, a-login-nav-header{
+
+.inp-search-nav {
+    background: rgb(255, 255, 255);
+    background: radial-gradient(circle, rgba(255, 255, 255, 0.409868170901173) 36%, rgba(236, 236, 236, 0.7768149496126575) 100%);
+    border: none;
+    border-radius: 5px;
+    width: 25em;
+    height: 2em;
+
+}
+
+.btn-inp-search-nav-header {
+    border: 1px solid black;
+    border-radius: 10px;
+    width: 8em;
+    height: 2em;
+}
+
+.btn-inp-search-nav-header:hover {
+    background-color: rgb(194, 194, 194);
+}
+
+.a-il-ul-nav-header,
+.a-login-nav-header {
     text-decoration: none;
     color: var(--black-color);
-    
+
 }
-
-.div-login-header {
-    display: inline;
-    text-align: right;
-    padding-left: 30px;
-}
-
-
 
 .nav-header {
     position: relative;
     display: inline;
     vertical-align: middle;
+    padding-right: 6em;
 
 }
 
@@ -68,7 +84,14 @@ body {
 .il-nav-header {
     display: inline-block;
     text-decoration: none;
-    padding: 0 20px 0 20px;
+    padding: 0 20px 0 50px;
+
+}
+
+.div-login-header {
+    display: inline;
+    text-align: right;
+    padding-left: 30px;
 
 }
 
