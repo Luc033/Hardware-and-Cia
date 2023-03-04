@@ -18,24 +18,22 @@
   })()
 
 
-let inputEmail = $('#news-email') 
+//botão aparecendo após o hover 
+let card = document.querySelector(".card")
 
-function validacaoEmail(field) {
-    let usuario = field.value.substring(0, field.value.indexOf("@"));
-    let dominio = field.value.substring(field.value.indexOf("@")+ 1, field.value.length);
-    let inputEmail = $('#news-email') 
-    
-    if ((usuario.length >=1) &&
-        (dominio.length >=3) &&
-        (usuario.search("@")==-1) &&
-        (dominio.search("@")==-1) &&
-        (usuario.search(" ")==-1) &&
-        (dominio.search(" ")==-1) &&
-        (dominio.search(".")!=-1) &&
-        (dominio.indexOf(".") >=1)&&
-        (dominio.lastIndexOf(".") < dominio.length - 1)) {
-            inputEmail.addClass('was-validated')
-        } else {
-            inputEmail.removeClass('was-validated')
-        }
-    }
+card.addEventListener("mouseover", function() {
+
+  let btn = document.querySelector(".card-btn")
+  btn.style.display = "block"
+
+})
+
+card.addEventListener("mouseout", function() {
+
+  let btn = document.querySelector(".card-btn")
+  btn.style.display = "none"
+
+})
+
+
+
