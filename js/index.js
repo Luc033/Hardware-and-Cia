@@ -19,21 +19,22 @@
 
 
 //botão aparecendo após o hover 
-let card = document.querySelector(".card")
+const cards = document.querySelectorAll(".card")
+cards.forEach(function(card) {
 
-card.addEventListener("mouseover", function() {
+  card.addEventListener("mouseover", function() {
+    const btn = this.querySelector(".card-btn")
+    btn.style.display = "block"
 
-  let btn = document.querySelector(".card-btn")
-  btn.style.display = "block"
+    const branco = this.querySelector(".branco")
+    branco.style.display = "none"
+  })
+  
+  card.addEventListener("mouseout", function() {
+    const btn = this.querySelector(".card-btn")
+    btn.style.display = "none"
 
+    const branco = this.querySelector(".branco")
+    branco.style.display = "block"
+  })
 })
-
-card.addEventListener("mouseout", function() {
-
-  let btn = document.querySelector(".card-btn")
-  btn.style.display = "none"
-
-})
-
-
-
