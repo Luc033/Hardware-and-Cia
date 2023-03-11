@@ -20,14 +20,14 @@ body {
     --black-color: black;
 }
 
-/* Nav */
+/* header */
 .header-principal {
     background-color: #F95738;
     width: 100%;
     justify-content: space-around;
     vertical-align: middle;
     padding: 15px 10px 10px 10px;
-    display: flexbox;
+    /*display: flexbox;*/
     margin-bottom: 50px;
 }
 
@@ -66,32 +66,89 @@ body {
     background-color: rgb(194, 194, 194);
 }
 
-.a-il-ul-nav-header,
-.a-login-nav-header {
-    text-decoration: none;
-    color: var(--black-color);
-
+/*  DROPDOWN  */
+:root {
+    --cor-fundo: rgb(34, 41, 37);
+    --cor-hover: rgb(118, 180, 145);
+    --cor-primaria: rgb(231, 241, 236);
+    --cor-letra: rgb(255, 255, 255);
 }
 
 .nav-header {
-    position: relative;
     display: inline;
     vertical-align: middle;
-    padding-right: 6em;
-
+    margin-right: 10%;
+    padding: ;
 }
 
-.ul-nav-header {
+.nav-header ul {
     display: inline;
-
+    list-style-type: none;
+    padding: 0;
+    color: var(--cor-letra);
 }
 
-.il-nav-header {
-    display: inline-block;
+.nav-header ul {
+    background-color: var(--cor-fundo);
+}
+
+.nav-header ul li {
+    display: inline;
+    position: relative;
+}
+
+.nav-header ul li a {
+    color: var(--cor-pimaria);
     text-decoration: none;
-    padding: 0 20px 0 50px;
+    display: inline-block;
+    padding: 10px;
+    transition: background .3s;
+}
+
+.nav-header ul a:hover {
+    background-color: var(--cor-hover);
+}
+
+/* DROPDOWN - SUB-MENU */
+
+
+/*
+    FALTA FAZER:
+    1 - Background de acordo com o desgin;
+    2 - Padding e Margin proporcial ao header; 
+    3 - Largura e Altura da ul/il proporcional ao header;
+    4 - Títulos coerentes;
+
+*/
+
+.nav-header ul ul {
+    text-align: center;
+    display: none;
+    left: -72%;
+    transform: translateY(-48%);
+    position: absolute;
+    opacity: 88%;
+    transition: all .5s;
 
 }
+
+.nav-header ul li:hover ul {
+    display: block;
+}
+
+.nav-header ul ul {
+    width: 150px;
+}
+
+.nav-header ul ul li a {
+    display: block;
+}
+
+
+
+
+
+
 
 .div-login-header {
     display: inline;
@@ -110,7 +167,7 @@ body {
 }
 
 .card {
-    margin: 30px 10px; 
+    margin: 30px 10px;
     border-radius: 5px;
     height: 500px;
     width: 20%;
@@ -128,7 +185,7 @@ body {
     padding: 10px 0;
 }
 
-.card .branco { 
+.card .branco {
     height: 59px;
 }
 
@@ -264,7 +321,7 @@ body {
 }
 
 
-.info-footer p{
+.info-footer p {
     font-size: 20px;
     margin: 0;
 }
@@ -284,7 +341,7 @@ body {
         font-size: 15px;
     }
 
-    .card .branco { 
+    .card .branco {
         height: 48.5px;
     }
 
@@ -304,8 +361,8 @@ body {
         font-size: 15px;
     }
 
-    .card .branco { 
+    .card .branco {
         height: 48.5px;
     }
 
-} 
+}
