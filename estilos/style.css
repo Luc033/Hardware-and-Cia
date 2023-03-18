@@ -117,13 +117,7 @@ body {
 /* DROPDOWN - SUB-MENU */
 
 
-/*
-    FALTA FAZER:
-    2 - Padding e Margin proporcial ao header; 
-    3 - Largura e Altura da ul/il proporcional ao header;
-    4 - Títulos coerentes;
 
-*/
 .nav-header ul ul a:hover{
     background-color: var(--cor-hover-submenu);
 }
