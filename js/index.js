@@ -38,3 +38,22 @@ cards.forEach(function(card) {
     branco.style.display = "block"
   })
 })
+
+const olhoFechado = document.querySelector("#olho-fechado")
+const olhoAberto = document.querySelector("#olho-aberto")
+
+olhoFechado.addEventListener("click", () => {
+  olhoFechado.style.display = "none";
+  olhoAberto.style.display = "block";
+
+  let input = document.querySelector(".senha-view input");
+  input.setAttribute("type", "text");
+})
+
+olhoAberto.addEventListener("click", () => {
+  olhoFechado.style.display = "block";
+  olhoAberto.style.display = "none";
+
+  let input = document.querySelector(".senha-view input");
+  input.setAttribute("type", "password");
+})

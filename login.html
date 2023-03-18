@@ -35,23 +35,31 @@
         rel="stylesheet">
 </head>
 <body class="login-body">
-    
-    <div class="form-login">
-        <div class="row">
-            <h1>Bem vindo de volta ao nosso E-commerce</h1>
-            <h2>Preencha os campos abaixo para prosseguir com sua conta</h2>
-            <div class="form-group email">
-                <label for="email">Endereço de email</label>
-                <input type="email" name="email" class="form-control" id="email" placeholder="Entre com seu E-mail">
+    <div class="form-login form-cadastro">
+        <form action="post">
+            <div class="row">
+                <h1 class="text-center">Bem vindo de volta ao nosso E-commerce</h1>
+                <h2 class="text-center">Preencha os campos abaixo para prosseguir com sua conta</h2>
+                <div class="form-group email">
+                    <label for="email">Endereço de email</label>
+                    <input type="email" name="email" class="form-control" id="email" placeholder="Entre com seu E-mail">
+                </div>
+                <div class="form-group">
+                    <label for="password">Senha </label>
+                    <div class="senha-view">
+                        <input type="password" class="form-control" placeholder="Entre com sua senha">
+                        <i id="olho-aberto" class="olho bi bi-eye-fill"></i>
+                        <i id ="olho-fechado" class="olho bi bi-eye-slash-fill"></i>
+                    </div>
+                </div>
+                <a href="#">
+                    <button type="submit">Continuar</button>
+                </a>
+                <a class="link-cadastro" href="cadastro.html">
+                    <p class="text-center">Ainda não possui cadastro? <u>Cadastrar-se</u></p>
+                </a>
             </div>
-            <div class="form-group">
-                <label for="password">Senha</label>
-                <input type="password" class="form-control" placeholder="Entre com sua senha">
-            </div>
-            <a href="#">
-                <button type="submit">Continuar</button>
-            </a>
-        </div>
+        </form>
     </div>
 
     <script src="js/index.js"></script>
