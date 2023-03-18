@@ -6,7 +6,6 @@
 
 body {
     font-family: 'roboto', sans-serif;
-    width: 100vw;
 }
 
 :root {
@@ -40,8 +39,6 @@ body {
     display: inline-block;
     padding: 0 25px 0 10px;
     vertical-align: middle;
-
-
 }
 
 .inp-search-nav {
@@ -51,7 +48,6 @@ body {
     border-radius: 5px;
     width: 25em;
     height: 2em;
-
 }
 
 .btn-inp-search-nav-header {
@@ -331,6 +327,115 @@ body {
     margin: 0;
 }
 
+/* Parte de login */
+.login-body {
+    align-items: center;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+.form-login {
+    width: max(70%, 400px);
+    background-color: var(--blue-color);
+    margin: 50px 0;
+    padding: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.493);
+}
+
+.form-login h1 {
+    color: white;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
+
+.form-login h2 {
+    font-size: 24px;
+    color: rgb(222, 212, 212);
+}
+
+.senha-view {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.form-login input {
+    font-size: 18px;
+}
+
+.form-login .olho {
+    position: absolute;
+    color: rgba(0, 0, 0, 0.9);
+    right: 0px;
+    font-size: 16px;
+    padding: 10px;
+}
+
+#olho-aberto {
+    display: none;
+}
+
+.form-login label {
+    font-size: 20px;
+    margin-top: 20px;
+}
+
+.form-login button {
+    color: white;
+    margin-top: 50px;
+    padding: 10px;
+    background-color: var(--light-orange-color);
+    border-radius: 10px;
+    width: 100%;
+    border: none;
+    text-align: center;
+}
+
+.form-login button:hover {
+    background-color: #e48736;
+    transition: .5s;
+    transform: scale(1.01);
+}
+
+.form-login a {
+    text-align: center;
+}
+
+.form-login p {
+    margin-top: 40px;
+    font-size: 19px;
+}
+
+.form-login p u {
+    margin-top: 20px;
+    font-size: 21px;
+}
+
+.form-login .link-cadastro {
+    color: white;
+    text-decoration: none;
+}
+
+.form-cadastro {
+    width: max(70%, 400px);
+    background-color: var(--blue-color);
+    margin: 50px 0;
+    padding: 80px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    color: white;
+    border-radius: 20px;
+    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.493);
+}
+
 /* media querie para tablets */
 @media (max-width: 992px) {
 
@@ -350,6 +455,10 @@ body {
         height: 48.5px;
     }
 
+    .form-login {
+        width: 90%;
+    }
+
 }
 
 /* Media querie para celulares */
@@ -360,8 +469,6 @@ body {
         padding: 0px;
     }
 
-
-
     .card a {
         font-size: 15px;
     }
@@ -370,4 +477,18 @@ body {
         height: 48.5px;
     }
 
-}
+    .form-login {
+        width: 90vw;
+        margin: 100px 0px;
+        padding: 100px 20px;
+    }
+
+    .form-login h1 {
+        font-size: 22px;
+    }
+
+    .form-login h2 {
+        font-size: 16px;
+    }
+
+} 
