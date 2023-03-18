@@ -40,8 +40,6 @@ body {
     display: inline-block;
     padding: 0 25px 0 10px;
     vertical-align: middle;
-
-
 }
 
 .inp-search-nav {
@@ -51,7 +49,6 @@ body {
     border-radius: 5px;
     width: 25em;
     height: 2em;
-
 }
 
 .btn-inp-search-nav-header {
