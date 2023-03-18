@@ -20,15 +20,14 @@ body {
     --black-color: black;
 }
 
-/* header */
 .header-principal {
     background-color: #F95738;
     width: 100%;
     justify-content: space-around;
     vertical-align: middle;
     padding: 15px 10px 10px 10px;
-    /*display: flexbox;*/
     margin-bottom: 50px;
+
 }
 
 .logo-header {
@@ -68,17 +67,19 @@ body {
 
 /*  DROPDOWN  */
 :root {
-    --cor-fundo: rgb(34, 41, 37);
-    --cor-hover: rgb(118, 180, 145);
-    --cor-primaria: rgb(231, 241, 236);
-    --cor-letra: rgb(255, 255, 255);
+    --cor-fundo: #f95738;
+    --cor-fundo-submenu: #ee964b;
+    --cor-hover: #ee964b;
+    --cor-hover-submenu: #ac3c26;
+    --cor-primaria: #ee964b;
+    --cor-letra: #ffffff;
 }
 
 .nav-header {
     display: inline;
-    vertical-align: middle;
+    vertical-align: left;
     margin-right: 10%;
-    padding: ;
+    padding-left: 30%;
 }
 
 .nav-header ul {
@@ -102,34 +103,43 @@ body {
     text-decoration: none;
     display: inline-block;
     padding: 10px;
-    transition: background .3s;
+    transition: background .1s;
 }
 
 .nav-header ul a:hover {
     background-color: var(--cor-hover);
 }
+.nav-header ul a:active {
+    background-color: var(--cor-hover);
+}
 
+/* proxima classe irá criar um espaço entre o icon e o texto, porém,não está aplicando este estilo em toda a lista  */
+/*.icon-list-header{
+    margin-right: 10%;
+}
+*/
 /* DROPDOWN - SUB-MENU */
 
 
 /*
     FALTA FAZER:
-    1 - Background de acordo com o desgin;
     2 - Padding e Margin proporcial ao header; 
     3 - Largura e Altura da ul/il proporcional ao header;
     4 - Títulos coerentes;
 
 */
-
+.nav-header ul ul a:hover{
+    background-color: var(--cor-hover-submenu);
+}
 .nav-header ul ul {
     text-align: center;
     display: none;
-    left: -72%;
-    transform: translateY(-48%);
+    left: -50%;
+    transform: translateY(-34%);
     position: absolute;
-    opacity: 88%;
-    transition: all .5s;
-
+    opacity: 95%;
+    transition: all .1s;
+    background-color: #ee964b;
 }
 
 .nav-header ul li:hover ul {
@@ -143,11 +153,6 @@ body {
 .nav-header ul ul li a {
     display: block;
 }
-
-
-
-
-
 
 
 .div-login-header {
