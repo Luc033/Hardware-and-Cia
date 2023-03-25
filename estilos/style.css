@@ -32,7 +32,7 @@ body {
 .logo-header {
     height: 80px;
     text-align: left;
-    margin: 0 50px 0 10px ;
+    margin: 0 50px 0 10px;
 }
 
 .form-search-header {
@@ -64,47 +64,73 @@ body {
 /*  DROPDOWN  */
 :root {
     --cor-fundo: #f95738;
-    --cor-fundo-submenu: #ee964b;
-    --cor-hover: #ee964b;
-    --cor-hover-submenu: #ac3c26;
-    --cor-primaria: #ee964b;
-    --cor-letra: #ffffff;
+    --cor-fundo-submenu: #f1f1f1;
+    --cor-icon: #0d3b66;
+    --cor-letra: #0d3b66;
 }
 
 .nav-header {
+    background: var(--cor-fundo);
     position: relative;
     display: inline-block;
     float: right;
-    margin: 20px 50px 10px 0 ;
-    align-items: center;
-    justify-content: center;
+    margin: 20px 50px 10px 0;
+
 }
-.nav-header a{
-    
-}
+
 .dropdown-content {
     display: none;
     position: absolute;
     z-index: 1;
+    background-color: #f3f3f3;
+    min-width: 160px;
+    padding: 12px 1px;
+    border-radius: 5px;
+    transform: translateX(-25%);
+    text-align: left;
+    justify-content: space-between;
 }
 
-.nav-header:hover>.dropdown-content {
+.dropdown-content a {
+    padding: 8px 0;
+    text-decoration: none;
     display: block;
-    background-color: var(--cor-fundo-submenu);
-    padding: 15px 10px 20px 10px;
-    width: 130%;
 }
 
-.dropdown-content a:hover{
-    background-color: var(--cor-hover-submenu);
-}
-
-.icon-navbar{
+.icon-navbar {
     font-size: 1.8em;
     margin-right: 5px;
-    color: var(--dark-blue-color);
+    color: var(--cor-icon);
 }
 
+
+.nav-header ul:hover .dropdown-content {
+    display: block;
+    padding: 15px 10px 20px 10px;
+    width: 130%;
+    box-shadow: -2px 1px 5px 1px #a9a8a8;
+}
+
+.dropli {
+    font-size: 16px;
+    border: none;
+    border-radius: 5px;
+    color: var(--cor-letra);
+}
+
+.dropdown-content a {
+    color: var(--cor-letra);
+    padding: 8px 8px;
+    text-decoration: none;
+    display: block;
+    font-size: 1.1em;
+    text-align: center;
+}
+
+.dropdown-content li:hover {
+    background: rgb(243,243,243);
+    background: radial-gradient(circle,  rgba(221,221,221,1)40%,  rgba(243,243,243,1)80%);
+}
 
 
 
