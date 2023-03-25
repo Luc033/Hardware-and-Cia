@@ -52,11 +52,12 @@ body {
     border-radius: 5px;
     width: 25em;
     height: 2em;
+    padding: 15px;
 }
 
 .btn-inp-search-nav-header {
     border: 1px solid black;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 8em;
     height: 2em;
 }
@@ -72,7 +73,6 @@ body {
     display: inline-block;
     float: right;
     margin: 20px 50px 10px 0;
-
 }
 
 .dropdown-content {
@@ -112,8 +112,9 @@ body {
     font-size: 16px;
     border: none;
     border-radius: 5px;
-    color: var(--cor-letra);
+    color: var(--cor-icon);
 }
+
 
 .dropdown-content a {
     color: var(--cor-letra);
@@ -411,11 +412,11 @@ body {
 @media (max-width: 992px) {
 
     .card {
-        width: 44%;
+        width: 30%;
     }
 
     .card h2 {
-        font-size: 30px;
+        font-size: 25px;
     }
 
     .card a {
@@ -430,14 +431,21 @@ body {
         width: 90%;
     }
 
+    .logo-footer {
+        flex-direction: row;
+    }
+
 }
 
 /* Media querie para celulares */
 @media (max-width: 576px) {
 
+    .card {
+        width: 60%;
+    }
+
     .card h2 {
         font-size: 20px;
-        padding: 0px;
     }
 
     .card a {
