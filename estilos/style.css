@@ -30,9 +30,9 @@ body {
 }
 
 .logo-header {
-    width: 10%;
-    height: 10%;
+    height: 80px;
     text-align: left;
+    margin: 0 50px 0 10px ;
 }
 
 .form-search-header {
@@ -72,85 +72,41 @@ body {
 }
 
 .nav-header {
-    display: inline;
-    vertical-align: left;
-    margin-right: 10%;
-    padding-left: 30%;
-}
-
-.nav-header ul {
-    display: inline;
-    list-style-type: none;
-    padding: 0;
-    color: var(--cor-letra);
-}
-
-.nav-header ul {
-    background-color: var(--cor-fundo);
-}
-
-.nav-header ul li {
-    display: inline;
     position: relative;
-}
-
-.nav-header ul li a {
-    color: var(--cor-pimaria);
-    text-decoration: none;
     display: inline-block;
-    padding: 10px;
-    transition: background .1s;
+    float: right;
+    margin: 20px 50px 10px 0 ;
+    align-items: center;
+    justify-content: center;
+}
+.nav-header a{
+    
+}
+.dropdown-content {
+    display: none;
+    position: absolute;
+    z-index: 1;
 }
 
-.nav-header ul a:hover {
-    background-color: var(--cor-hover);
+.nav-header:hover>.dropdown-content {
+    display: block;
+    background-color: var(--cor-fundo-submenu);
+    padding: 15px 10px 20px 10px;
+    width: 130%;
 }
-.nav-header ul a:active {
-    background-color: var(--cor-hover);
-}
 
-/* proxima classe irá criar um espaço entre o icon e o texto, porém,não está aplicando este estilo em toda a lista  */
-/*.icon-list-header{
-    margin-right: 10%;
-}
-*/
-/* DROPDOWN - SUB-MENU */
-
-
-
-.nav-header ul ul a:hover{
+.dropdown-content a:hover{
     background-color: var(--cor-hover-submenu);
 }
-.nav-header ul ul {
-    text-align: center;
-    display: none;
-    left: -50%;
-    transform: translateY(-34%);
-    position: absolute;
-    opacity: 95%;
-    transition: all .1s;
-    background-color: #ee964b;
-}
 
-.nav-header ul li:hover ul {
-    display: block;
-}
-
-.nav-header ul ul {
-    width: 150px;
-}
-
-.nav-header ul ul li a {
-    display: block;
+.icon-navbar{
+    font-size: 1.8em;
+    margin-right: 5px;
+    color: var(--dark-blue-color);
 }
 
 
-.div-login-header {
-    display: inline;
-    text-align: right;
-    padding-left: 30px;
 
-}
 
 
 /* Card */
@@ -485,4 +441,4 @@ body {
         font-size: 16px;
     }
 
-} 
+}
