@@ -22,6 +22,8 @@
 
 //botão aparecendo após o hover 
 const cards = document.querySelectorAll(".card")
+
+
 cards.forEach(function(card) {
 
   card.addEventListener("mouseover", function() {
@@ -41,8 +43,8 @@ cards.forEach(function(card) {
   })
 })
 
-const olhoFechado = document.querySelector("#olho-fechado")
-const olhoAberto = document.querySelector("#olho-aberto")
+const olhoFechado = document.querySelector("#olho-fechado");
+const olhoAberto = document.querySelector("#olho-aberto");
 
 olhoFechado.addEventListener("click", () => {
   olhoFechado.style.display = "none";

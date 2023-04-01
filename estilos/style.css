@@ -100,7 +100,6 @@ body {
     color: var(--cor-icon);
 }
 
-
 .nav-header ul:hover .dropdown-content {
     display: block;
     padding: 15px 10px 20px 10px;
@@ -128,6 +127,21 @@ body {
 .dropdown-content li:hover {
     background: rgb(243,243,243);
     background: radial-gradient(circle,  rgba(221,221,221,1)40%,  rgba(243,243,243,1)80%);
+}
+
+/* offCanvas */
+
+
+.items-filtro {
+    display: flex; 
+    flex-direction: row;
+    gap: 50px;
+    justify-content: space-around;
+}
+
+.container-filtro-items {
+    display: flex;
+    flex-direction: column;
 }
 
 /* Card */
@@ -411,37 +425,13 @@ body {
 /* media querie para tablets */
 @media (max-width: 992px) {
 
+    /* Card */
     .card {
-        width: 30%;
+        width: 29%;
     }
 
-    .card h2 {
-        font-size: 25px;
-    }
-
-    .card a {
+    .card h1 {
         font-size: 15px;
-    }
-
-    .card .branco {
-        height: 48.5px;
-    }
-
-    .form-login {
-        width: 90%;
-    }
-
-    .logo-footer {
-        flex-direction: row;
-    }
-
-}
-
-/* Media querie para celulares */
-@media (max-width: 576px) {
-
-    .card {
-        width: 60%;
     }
 
     .card h2 {
@@ -456,6 +446,61 @@ body {
         height: 48.5px;
     }
 
+    /* News Letter */
+    .news-letter input {
+        font-size: 20px;
+    }
+
+    .news-letter button[type="submit"] {
+        width: 100%;
+    }
+
+     /* Login/cadastro */
+    .form-login {
+        width: 90%;
+    }
+
+    .logo-footer {
+        flex-direction: row;
+    }
+
+}
+
+/* Media querie para celulares */
+@media (max-width: 576px) {
+
+    /* Card */
+    .linha-card {
+    margin: 0 auto;
+    }
+
+    .card {
+        width: 45%;
+        margin: 10px;
+    }
+
+    .card h2 {
+        font-size: 20px;
+    }
+
+    .card a {
+        font-size: 15px;
+    }
+
+    .card .branco {
+        height: 48.5px;
+    }
+
+    /* News Letter */
+    .news-letter input {
+        font-size: 20px;
+    }
+
+    .news-letter button[type="submit"] {
+        width: 100%;
+    }
+
+    /* Login/cadastro */
     .form-login {
         width: 90vw;
         margin: 100px 0px;
@@ -468,6 +513,38 @@ body {
 
     .form-login h2 {
         font-size: 16px;
+    }
+
+    /* Footer  */
+    
+
+    .logo-footer{
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        flex-wrap: wrap;
+        gap: 40px;
+    }
+
+    .logo-img {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .logo-text {
+        margin: 0 auto;
+    }
+
+    .logo-text p {
+        margin: 0;
+        font-size: 30px;
+        font-weight: bold;
+    }
+
+    .info-footer {
+        margin: 0 auto;
+        text-align: center;
+        font-size: 25px;
     }
 
 }
