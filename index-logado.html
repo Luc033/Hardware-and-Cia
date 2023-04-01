@@ -52,50 +52,20 @@
         <!-- NAVBAR-->
 
         <nav class="nav-header">
-            <a class="btn-cadastro" href="cadastro.html" rel="next" >Cadastrar-se </a>
-            <a class="btn-login" href="login.html" rel="next">Login</a>
+            <ul>
+                <li class="dropli"><i class="icon-navbar bi bi-person-circle"></i>Conta</li>
+                <ul class="dropdown-content">
+                    <li><a href="#"><i class="icon-navbar bi bi-bag-fill icon-list-header"></i>Carrinho</a></li>
+                    <li><a href="#"><i class="icon-navbar bi bi-bookmark-heart-fill icon-list-header"></i>Favoritos</a></li>
+                    <li><a href="#"><i class="icon-navbar bi bi-x-circle-fill icon-list-header"></i>Sair</a></li>
+                </ul>
+            </ul>
         </nav>
     </header>
 
     <main>
         <div class="container-fluid container-card">
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">Abrir Filtro</button>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-                <div class="offcanvas-header">
-                    <h5 id="offcanvasTLeftLabel">Filtro de produtos</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <div>
-                        <h2 class="text-center">Filtrar por</h2>
-                        <div class="text-center row items-filtro">
-                            <div class="container-filtro-items">
-                                <a href="#">Headset</a>
-                                <a href="#">Mouse</a>
-                                <a href="#">Teclado</a>
-                                <a href="#">MousePad</a>
-                                <a href="#">Celular</a>
-                                <a href="#">Computador</a>
-                            </div>
-                            <div class="container-filtro-items">
-                                <a href="#">Monitor</a>
-                                <a href="#">Fones de ouvido</a>
-                                <a href="#">Televisão</a>
-                                <a href="#">Roteadores</a>
-                                <a href="#">Memórias SSd</a>
-                                <a href="#">Memória Ram</a>
-                            </div>
-                        </div>
-                    </div>
-                    <div>
-                        <h2 class="text-center">Preço do produto</h2>
-                    </div>
-                    <div>
-                        <h2 class="text-center">Ordenar por</h2>
-                    </div>
-                </div>
-            </div>
-            <div class="linha-card">   
+            <div class="linha-card">
                 <div class="card">
                     <img class="card-img-top" src="imagens/thumb_tv_p1e_43_1_1.png" alt="Imagem do produto">
                     <div class="card-body">

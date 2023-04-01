@@ -66,13 +66,14 @@ body {
     background-color: rgb(194, 194, 194);
 }
 
-
+/* DROPDOWN  */ 
 .nav-header {
     background: var(--cor-fundo);
     position: relative;
     display: inline-block;
+    margin: 2em 50px 10px 0;
     float: right;
-    margin: 20px 50px 10px 0;
+    
 }
 
 .dropdown-content {
