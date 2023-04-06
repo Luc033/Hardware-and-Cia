@@ -22,6 +22,7 @@
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
 
     <!-- FONT-FAMILY-->
     <!-- Poppins -->
@@ -41,59 +42,67 @@
 </head>
 
 <body>
-
+    <!-- NAVBAR-->
     <header class="header-principal">
-        <a href="index.html"><img class="logo-header" src="imagens/logo-sombra.png" alt=""></a>
-        <form action="" method="" class="form-search-header">
-            <input class="inp-search-nav" id="inp-search-nav" autocomplete="off" placeholder="Buscar..." type="text"
-                name="" value="">
-            <button type="submit" class="btn-inp-search-nav-header" name="">Pesquisar</button>
-        </form>
-        <!-- NAVBAR-->
-
         <nav class="nav-header">
-            <a class="btn-cadastro" href="cadastro.html" rel="next" >Cadastrar-se </a>
-            <a class="btn-login" href="login.html" rel="next">Login</a>
+            <div class="logo-img">
+                <a href="index.html">
+                    <img class="logo-header" src="imagens/logo-sombra.png" alt="Logo E-commerce">
+                </a>
+            </div>
+            <div class="login-header">
+                <a class="btn-header btn-cadastro" href="cadastro.html" rel="next" >Cadastrar</a>
+                <a class="btn-header btn-login" href="login.html" rel="next">Login</a>
+            </div>
         </nav>
     </header>
 
     <main>
         <div class="container-fluid container-card">
-            <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">Abrir Filtro</button>
-            <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-                <div class="offcanvas-header">
-                    <h5 id="offcanvasTLeftLabel">Filtro de produtos</h5>
-                    <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                </div>
-                <div class="offcanvas-body">
-                    <div>
-                        <h2 class="text-center">Filtrar por</h2>
-                        <div class="text-center row items-filtro">
-                            <div class="container-filtro-items">
-                                <a href="#">Headset</a>
-                                <a href="#">Mouse</a>
-                                <a href="#">Teclado</a>
-                                <a href="#">MousePad</a>
-                                <a href="#">Celular</a>
-                                <a href="#">Computador</a>
-                            </div>
-                            <div class="container-filtro-items">
-                                <a href="#">Monitor</a>
-                                <a href="#">Fones de ouvido</a>
-                                <a href="#">Televisão</a>
-                                <a href="#">Roteadores</a>
-                                <a href="#">Memórias SSd</a>
-                                <a href="#">Memória Ram</a>
+            <div class="start-main container-fluid">
+                
+
+                <button class="btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">Abrir Filtro</button>
+                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+                    <div class="offcanvas-header">
+                        <h5 id="offcanvasTLeftLabel">Filtro de produtos</h5>
+                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                    </div>
+                    <div class="offcanvas-body">
+                        <div>
+                            <h2 class="text-center">Filtrar por</h2>
+                            <div class="text-center row items-filtro">
+                                <div class="container-filtro-items container-filtro-items-1 col-5">
+                                    <a href="#">Headset</a>
+                                    <a href="#">Mouse</a>
+                                    <a href="#">Teclado</a>
+                                    <a href="#">MousePad</a>
+                                    <a href="#">Celular</a>
+                                    <a href="#">Computador</a>
+                                </div>
+                                <div class="container-filtro-items container-filtro-items-2 col-5">
+                                    <a href="#">Monitor</a>
+                                    <a href="#">Fones de ouvido</a>
+                                    <a href="#">Televisão</a>
+                                    <a href="#">Roteadores</a>
+                                    <a href="#">Memórias SSd</a>
+                                    <a href="#">Memória Ram</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div>
-                        <h2 class="text-center">Preço do produto</h2>
-                    </div>
-                    <div>
-                        <h2 class="text-center">Ordenar por</h2>
+                        <div>
+                            <h2 class="text-center">Preço do produto</h2>
+                        </div>
+                        <div>
+                            <h2 class="text-center">Ordenar por</h2>
+                        </div>
                     </div>
                 </div>
+                <form class="form-search">
+                    <input class="inp-search-nav" id="inp-search-nav" autocomplete="off" placeholder="Buscar..." type="text"
+                        name="" value="">
+                    <button type="submit" class="main-btn btn-primary btn-inp-search-nav-header" name="">Pesquisar</button>
+                </form>
             </div>
             <div class="linha-card">   
                 <div class="card">
@@ -130,7 +139,7 @@
         </div>
 
         <div class="news-letter" id="news-area">
-            <div class="container">
+            <div class="container-fluid container-md">
                 <div class="row">
                     <div class="col-md-6 news-text">
                         <h1>Se cadastre para receber as novidades</h1>
@@ -176,7 +185,7 @@
         </div>
 
         <div class="footer" id="footer-area">
-            <div class="container logo-footer">
+            <div class="container-md container-fluid logo-footer">
                 <div class="logo-img">
                     <img src="imagens/logo-sombra.png" alt="logo e-commerce">
                 </div>
