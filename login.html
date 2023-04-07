@@ -36,7 +36,7 @@
 </head>
 <body class="login-body">
     <div class="form-login form-cadastro">
-        <form action="post">
+        <form action="loginAction.php" method="POST">
             <div class="row">
                 <h1 class="text-center">Bem vindo de volta ao nosso E-commerce</h1>
                 <h2 class="text-center">Preencha os campos abaixo para prosseguir com sua conta</h2>
@@ -47,7 +47,7 @@
                 <div class="form-group">
                     <label for="password">Senha </label>
                     <div class="senha-view">
-                        <input type="password" class="form-control" placeholder="Entre com sua senha">
+                        <input type="password" class="form-control" id="pws" placeholder="Entre com sua senha">
                         <i id="olho-aberto" class="olho bi bi-eye-fill"></i>
                         <i id ="olho-fechado" class="olho bi bi-eye-slash-fill"></i>
                     </div>

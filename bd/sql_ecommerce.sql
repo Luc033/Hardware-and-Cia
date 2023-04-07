@@ -178,5 +178,10 @@ create table relacao_produto_pedido(
     constraint fk_relacao_produto_pedido_pedido foreign key (pedido_idPedido) references pedido (idPedido) on update cascade
 );
     
-    
-    
+ -- adiciona data da transação do pedido e a data que foi feito o pedido pelo cliente.
+
+ALTER TABLE pedido ADD COLUMN data_pedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL ;
+	UPDATE pedido SET data_pedido = CURRENT_DATE();
+
+ALTER TABLE pedido ADD COLUMN data_pedido_cliente TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL;
+
