@@ -188,3 +188,36 @@ ALTER TABLE pedido ADD COLUMN data_pedido_cliente TIMESTAMP DEFAULT CURRENT_TIME
 -- deletar coluna de data extra
 ALTER TABLE pedido
 	DROP data_pedido_cliente;
+
+
+-- Criação da procedure para gerar os relatórios semanais
+DROP PROCEDURE IF EXISTS gerar_relatorio_semanal;
+
+DELIMITER $$
+
+CREATE PROCEDURE gerar_relatorio_semanal()
+	BEGIN
+		
+	-- CRIAR TABELA PARA ARMAZENAR OS DADOS do relatório
+    CREATE TABLE gerar_relatorio (
+    id_pedido INT,
+    data_pedido TIMESTAMP,
+    statusPedido ENUM('Cancelado','Confirmado','Em processamento'),
+    nomeProduto VARCHAR(50),
+    categoria ENUM('Headset','Mouse','Teclado','Notebook','Monitor','SSD','RAM'),
+    valor FLOAT,
+    qtdprodutopedido INT
+);
+        
+        -- População da tabela com os dados dos pedidos agrupados por semana
+       
+        INSERT INTO gerar_relatorio (id_pedido, data_pedido, statusPedido, nomeProduto, categoria, valor, qtdprodutopedido)
+			SELECT p.id_pedido, p.data_pedido, p.statusPedido, prod.nomeProduto, prod.categoria, prod.valor, rpp.qtdprodutopedido
+			FROM pedido p
+				INNER JOIN relacao_produto_pedido rpp ON p.idPedido = rpp.pedido_idPedido
+					INNER JOIN produto prod ON rpp.produto_idProduto = prod.idProduto
+			WHERE p.id_pedido = @id_pedido;
+        
+        END $$
+
+DELIMITER ;
