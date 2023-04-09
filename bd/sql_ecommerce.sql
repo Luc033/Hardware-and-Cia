@@ -185,3 +185,6 @@ ALTER TABLE pedido ADD COLUMN data_pedido TIMESTAMP DEFAULT CURRENT_TIMESTAMP NO
 
 ALTER TABLE pedido ADD COLUMN data_pedido_cliente TIMESTAMP DEFAULT CURRENT_TIMESTAMP NOT NULL;
 
+-- deletar coluna de data extra
+ALTER TABLE pedido
+	DROP data_pedido_cliente;
