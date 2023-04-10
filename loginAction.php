@@ -14,9 +14,14 @@ if ($conn->connect_error) {
   die("Erro na conexão: " . $conn->connect_error);
 }
 
-$username = mysqli_real_escape_string($conexao, $_POST['email']);
-$query = "SELECT * FROM cliente WHERE email = '$email'";
-$resultado = mysqli_query($conexao, $query);
+// deixa escapar os caracteres especiais presentes em uma string permitindo consulta segura
+$email = mysqli_real_escape_string($conn, $_POST['email']);
+
+// prepared statements para separar as instruções SQL da entrada do usuário ( evita SQL injection)
+$stmt = $conn->prepare("SELECT * FROM cliente WHERE email = ?");
+$stmt->bind_param("s", $email);
+$stmt->execute();
+$resultado = $stmt->get_result();
 
 if ($row = mysqli_fetch_array($resultado)) {
     if (password_verify($_POST['pws'], $row['senha'])) {
@@ -30,4 +35,8 @@ if ($row = mysqli_fetch_array($resultado)) {
     // Nome de usuário não encontrado, exibe uma mensagem de erro
     echo "Usuário não encontrado";
   }
+// fechar as conexões para evitar vazamento de memória
+$stmt->close();
+$conn->close();
+
 ?>
