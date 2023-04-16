@@ -65,9 +65,34 @@ body {
 .btn-cadastro, .btn-login {
     width: min(100px, 50%);
     text-align: center;
+    font-weight: bold;
+}
+
+.btn-login {
+    display: flex;
+}
+
+.dropdown-menu {
+    padding: 0;
+}
+
+.dropdown-menu li{
+    background-color: white;
+    text-align: center;
+    padding: 5px;
+}
+
+.dropdown-menu  a{
+    text-decoration: none;
+    color: var(--cor-fundo);
+    font-weight: bold;
+
 }
 
 /* DROPDOWN  */ 
+
+
+
 .nav-header {
     background-color: var(--cor-fundo);   
 }
@@ -242,7 +267,6 @@ input[type="range"]::-webkit-slider-thumb {
 }
 
 input[type="range"]::-moz-range-thumb {
-    -webkit-appearance: none;
     height: 1.7em;
     width: 1.7em;
     cursor: pointer;
