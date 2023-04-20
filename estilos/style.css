@@ -569,6 +569,10 @@ input[type="range"]:active::-webkit-slider-thumb {
     margin-bottom: 20px;
 }
 
+form .h1-login{
+    color: white;
+    margin-bottom: 10px;    
+}
 .form-login h2 {
     font-size: 24px;
     color: rgb(255, 255, 255);
@@ -618,9 +622,25 @@ input[type="range"]:active::-webkit-slider-thumb {
     border: none;
     text-align: center;
 }
+.form-func button {
+    background-color: #f95838b8;
+}
+.form-adm button {
+    background-color: #0d3b66d6;
+}
 
 .form-login button:hover {
     background-color: #e48736;
+    transition: .5s;
+    transform: scale(1.01);
+}
+.form-func button:hover {
+    background-color: #f95838;
+    transition: .5s;
+    transform: scale(1.01);
+}
+.form-adm button:hover {
+    background-color: #0D3B66;
     transition: .5s;
     transform: scale(1.01);
 }
@@ -635,7 +655,7 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 
-.form-login .link-cadastro {
+.form-login .link-cadastro, .link-esqueceu-senha {
     color: white;
     text-decoration: none;
 }
@@ -656,6 +676,13 @@ input[type="range"]:active::-webkit-slider-thumb {
     transform: translate(-50%, -50%);
 }
 
+.form-adm{
+    background-color: var(--dark-orange-color);
+}
+.form-func{
+    background-color: var(--light-orange-color);
+}
+
 .has-cadaster span{
     color: rgba(251, 251, 251, 0.835);
 }
@@ -670,14 +697,16 @@ input[type="range"]:active::-webkit-slider-thumb {
     text-decoration: underline;
 }
 
-.link-cadastro u{
+.link-cadastro u, .link-esqueceu-senha u{
     font-weight: bold;
     text-decoration: none;
 }
 
-.link-cadastro u:hover {
+.link-cadastro u:hover, .link-esqueceu-senha u:hover {
     text-decoration: underline;
 }
+
+
 
 
 /* media querie para tablets */
