@@ -68,6 +68,8 @@ body {
     font-weight: bold;
 }
 
+
+
 .btn-login {
     display: flex;
 }
@@ -542,6 +544,9 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 /* Parte de login */
+.cad-tel{
+    margin: auto;
+}
 .login-body {
     align-items: center;
     display: flex;
@@ -560,7 +565,7 @@ input[type="range"]:active::-webkit-slider-thumb {
     color: white;
     border-radius: 20px;
     box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.493);
-    height: 950px;
+    height: 1000px;
 }
 
 .form-login h1 {
@@ -626,7 +631,7 @@ form .h1-login{
     background-color: #f95838b8;
 }
 .form-adm button {
-    background-color: #0d3b66d6;
+    background-color: #0d3b66;
 }
 
 .form-login button:hover {
@@ -640,7 +645,7 @@ form .h1-login{
     transform: scale(1.01);
 }
 .form-adm button:hover {
-    background-color: #0D3B66;
+    background-color: #10477a;
     transition: .5s;
     transform: scale(1.01);
 }
