@@ -101,3 +101,22 @@ function fillColor () {
   sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}%, #f95738 ${percent1}%, #f95738  ${percent2}%, #dadae5 ${percent2}%)`
 }
 
+//Adicionando o dropdown do botão "Relatório"
+
+// selecione o botão e o submenu
+const btnRelatorio = document.getElementById("btn-dropd-relatorio");
+const submenuRelatorio = document.querySelector(".submenu-relatorio");
+
+// adicione um evento de clique ao botão
+btnRelatorio.addEventListener("click", function() {
+  // verifique se o submenu está visível
+  if (submenuRelatorio.style.display === "block") {
+    // se estiver visível, oculte-o
+    submenuRelatorio.style.display = "none";
+  } else {
+    // se estiver oculto, exiba-o
+    submenuRelatorio.style.display = "block";
+  }
+});
+
+
