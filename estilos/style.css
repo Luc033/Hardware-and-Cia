@@ -730,6 +730,7 @@ form .h1-login {
   text-decoration: underline;
 }
 
+
 /* media querie para tablets */
 @media (max-width: 992px) {
   .search-header .inp-search-nav {

@@ -9,7 +9,7 @@
     <link rel="stylesheet" href="estilos/reset.css" />
 
     <!-- css -->
-    <link rel="stylesheet" href="estilos/style.css" />
+    <link rel="stylesheet" href="estilos/userProfile.css" />
 
     <!-- BootStrap Css -->
     <link
@@ -48,13 +48,65 @@
   <body>
     <main>
       <div class="content-profile">
-        <img src="imagens/user-icons/user-icon.png" alt="Ícone de usuário" />
-        <div class="span-profile" style="">
-          Email: <label for="email">none</label>
-        </div>
-        <div class="span-profile">
-          Nome: <label for="nome">none</label> Sobrenome:
-        </div>
+        <h1>Informações de Usuário</h1>
+        <form action="GET">
+          <div class="row">
+
+            <div class="nameUser form-group col-12 col-md-6">
+              <label>Nome: <input disabled value ="{NOME DO USUÁRIO}"></input></label>
+            </div>
+
+            <div class="lastNameUser form-group col-12 col-md-6">
+              <label>Sobrenome: <input disabled value ="{SOBRENOME DO USUÁRIO}"></inp></label>
+            </div>
+
+            <div class="dataUser form-group col-12 col-md-6">
+              <label>Data de Nascimento: <input type="date" disabled value ="{DATA DE NASCIMENTO DO USUÁRIO}"></inp></label>
+            </div>
+            
+            <div class="telUser form-group col-12 col-md-6">
+              <label>Telefone: <input disabled value ="{TELEFONE DO USUÁRIO}"></inp></label>
+            </div>
+      
+            <div class="cpfUser form-group col-md-6 col-12">
+              <label>CPF/CNPJ: <input disabled value ="{CPF DO USUÁRIO}"></inp></label>
+            </div>
+            
+            <div class="emailUser form-group col-md-6 col-12">
+              <label>Email: <input disabled value ="{Email DO USUÁRIO}"></inp></label>
+            </div>
+
+            <div class="ruaUser form-group col-md-6 col-12">
+              <label>Rua: <input disabled value ="{RUA DO USUÁRIO}"></inp></label>
+            </div>
+
+            <div class="numeroCasaUser form-group col-md-6 col-12">
+              <label>N°: <input disabled value ="{N° DO USUÁRIO}"></inp></label>
+            </div>
+
+            <div class="bairroUser form-group col-md-6 col-12">
+              <label>Bairro: <input disabled value ="{BAIRRO DO USUÁRIO}"></inp></label>
+            </div>
+            
+            <div class="cidadeUser form-group col-md-6 col-12">
+              <label>Cidade: <input disabled value ="{CIDADE DO USUÁRIO}"></inp></label>
+            </div>
+
+            <div class="estadoUser form-group col-md-6 col-12">
+              <label>Estado: <input disabled value ="{ESTADO DO USUÁRIO}"></inp></label>
+            </div>
+
+            <div class="cepUser form-group col-md-6 col-12">
+              <label>CEP: <input disabled value ="{CEP DO USUÁRIO}"></inp></label>
+            </div>
+
+            <div class="buttons">
+              <button class="editUser">Editar Perfil</button>
+              <button class="leaveUser">Sair</button>
+              <button class="removeUser">Excluir</button>
+            </div>
+            </div>
+        </form>
       </div>
     </main>
   </body>
