@@ -68,8 +68,6 @@ body {
     font-weight: bold;
 }
 
-
-
 .btn-login {
     display: flex;
 }
@@ -92,9 +90,6 @@ body {
 }
 
 /* DROPDOWN  */ 
-
-
-
 .nav-header {
     background-color: var(--cor-fundo);   
 }
@@ -710,8 +705,6 @@ form .h1-login{
 .link-cadastro u:hover, .link-esqueceu-senha u:hover {
     text-decoration: underline;
 }
-
-
 
 
 /* media querie para tablets */

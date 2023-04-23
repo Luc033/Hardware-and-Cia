@@ -1,0 +1,91 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'roboto', sans-serif;
+}
+
+body {
+    width: 100%;
+}
+
+h1 {
+    text-align: center;
+    padding-bottom: 30px;
+    font-weight: bolder;
+}
+
+.content-profile {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: min(800px, 100%);
+    padding: 40px;
+    box-shadow: 4px 4px 16px rgba(0, 0, 0, 0.479);
+}
+
+.form-group {
+    margin: auto;
+    padding: 20px;
+}
+
+input {
+    font-size: 18px;
+    text-align: center;
+    background-color: white;
+    border-bottom: 1px solid #f9583891;
+    border-top: none;
+    border-left: none;
+    border-right: none;
+}
+
+div {
+    margin-bottom: 20px;
+    background-color: #fff;
+    border-radius: 10px;
+}
+
+label {
+    font-size: 18px;
+    font-weight: bold;
+    color: #F95738;
+    background-color: #fff;
+}
+
+button {
+    border: none;
+}
+
+.buttons {
+    display: flex;
+    justify-content: center;
+    gap: 30px;
+}
+
+.editUser, .leaveUser, .removeUser {
+    padding: 10px;
+    width: 110px;
+    color: white;
+    font-weight: bold;
+    border-radius: 6px;
+}
+
+.editUser {
+    background-color: green;
+}
+
+.leaveUser {
+    background-color: red;
+}
+
+.removeUser {
+    background-color: black;
+}
+
+@media (max-width: 576px) {
+
+    .content-profile {
+        padding: 6px;
+    }
+}
