@@ -33,11 +33,9 @@ alter table pagamento auto_increment=1;
 -- Criar tabela cliente;
 create table cliente(
 	idCliente int auto_increment primary key,
-    primeiroNome varchar(45) not null,
-    nomeDoMeioInicial varchar(3),
+    nome varchar(45) not null,
     sobrenome varchar(45) not null,
     dataNascimento date not null unique,
-    endereco varchar(45),
     rua varchar(45) not null,
     numero varchar(6) not null,
     complemento varchar(45),
@@ -59,8 +57,7 @@ create table cliente(
 -- Criar tabela funcionário;
 create table funcionario(
 	idFuncionario int auto_increment primary key,
-    primeiroNomeFunc varchar(45) not null,
-    nomeDoMeioInicialFunc varchar(3),
+    nomeFunc varchar(45) not null,
     sobrenomeFunc varchar(45) not null,
     emailFunc varchar(45) not null,
     senhaFunc varchar(45) not null
@@ -70,8 +67,7 @@ create table funcionario(
 -- Criar tabela administrador;
 create table administrador(
 	idAdm int auto_increment primary key,
-    primeiroNomeAdm varchar(45) not null,
-    nomeDoMeioInicialAdm varchar(3),
+    nomeAdm varchar(45) not null,
     sobrenomeAdm varchar(45) not null,
     emailAdm varchar(45) not null,
     senhaAdm varchar(45) not null
