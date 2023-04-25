@@ -1,48 +1,66 @@
 <?php
-
+/*
 // Configuração do banco de dados
-$servername = "localhost";
-$username = "usuario"; //usuario bd
-$password = "senha"; // senha do bd
-$dbname = "ecommerce"; // nome do bd
+require_once 'Connect.php';
 
-// Cria a conexão com o banco de dados
-$conn = new mysqli($servername, $username, $password, $dbname);
+//Insere os dados na tabela cliente
 
-// Verifica se a conexão ocorreu sem problemas
-if ($conn->connect_error) {
-  die("Erro na conexão: " . $conn->connect_error);
-}
+$sql = "INSERT INTO cliente (nome, sobrenome, dataNascimento, rua, numero, complemento, bairro, cidade, estado, cep, cpf_cnpj, telefone, email, senha) VALUES
+('".$_POST['name']."','"
+.$_POST['sobrenome']."', '".$_POST['rua']."', '".$_POST['dataNasc']."', '".$_POST['numero']."', '".$_POST['complemento']."', '".$_POST['bairro']."', '".$_POST['cidade']."', '".$_POST['estado']."', '".$_POST['cep']."', '".$_POST['cpf_cnpj']."', '".$_POST['tel']."', '".$_POST['email']."', '".$_POST['pws']."')";
 
-// Obtém os dados do formulário e aplica as devidas validações
-$nome = mysqli_real_escape_string($conn, $_POST['name']);
-$sobrenome = mysqli_real_escape_string($conn, $_POST['secName']);
-$rua = mysqli_real_escape_string($conn, $_POST['rua']);
-$numero = mysqli_real_escape_string($conn, $_POST['numero']);
-$complemento = mysqli_real_escape_string($conn, $_POST['complement']);
-$bairro = mysqli_real_escape_string($conn, $_POST['bairro']);
-$cidade = mysqli_real_escape_string($conn, $_POST['cidade']);
-$estado = mysqli_real_escape_string($conn, $_POST['Estado']);
-$cep = mysqli_real_escape_string($conn, $_POST['cep']);
-$cpfCnpj = mysqli_real_escape_string($conn, $_POST['cpfCnpj']);
-$telefone = mysqli_real_escape_string($conn, $_POST['tel']);
-$email = mysqli_real_escape_string($conn, $_POST['email']);
-$password = password_hash($_POST['pws'], PASSWORD_DEFAULT);
+// se cadastrado com sucesso envia para a pagina de login
+if ($connection->query($sql) === TRUE) {
+    echo '
+    <a href="login.html">
+        <h1 class="w3-button w3-teal">Dados cadastrados com sucesso! </h1><br>
+        <h1> Faça login para continuar</h1>
 
-// Cria a query SQL de inserção com prepared statements
-$stmt = $conn->prepare("INSERT INTO cliente (primeiroNome, sobrenome, rua, numero, complemento, bairro, cidade, estado, cep, cpf_cnpj, telefone, email, senha) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)");
-$stmt->bind_param("sssssssssssss", $nome, $sobrenome, $rua, $numero, $complemento, $bairro, $cidade, $estado, $cep, $cpfCnpj, $telefone, $email, $password);
-$stmt->execute();
+    </a> 
+    ';
 
-// Verifica se a inserção foi bem sucedida
-if ($stmt->affected_rows > 0) {
-  echo "Dados salvos com sucesso!";
+    // se der erro, avisa para refazer o cadastro mantendo na tela de cadastro
 } else {
-  echo "Erro ao salvar dados: " . $conn->error;
+    echo '
+    <a href="cadastro.html">
+        <h1 class="w3-button w3-teal">ERRO! </h1>
+    </a> 
+    ';
+    echo $connection->error;
 }
 
-// Fecha a conexão com o banco de dados
-$stmt->close();
-$conn->close();
-?>
+$connection->close();*/
+
+// incluir a classe cliente
+require_once 'Cliente.php';
+
+    // Cria um novo objeto Cliente
+    $cliente = new Cliente();
+    
+    // Define os valores dos campos usando os dados do formulário
+    $cliente->setNome($_POST["nome"]);
+    $cliente->setSobrenome($_POST["sobrenome"]);
+    $cliente->setDatanascimento($_POST["dataNascimento"]);
+    $cliente->setCpf_cnpj($_POST["cpf_cnpj"]);
+    $cliente->setTelefone($_POST["tel"]);
+    $cliente->setRua($_POST["rua"]);
+    $cliente->setNumero($_POST["numero"]);
+    $cliente->setComplemento($_POST["complemento"]);
+    $cliente->setBairro($_POST["bairro"]);
+    $cliente->setCidade($_POST["cidade"]);
+    $cliente->setEstado($_POST["estado"]);
+    $cliente->setCep($_POST["cep"]);
+    $cliente->setEmail($_POST["email"]);
+    $cliente->setSenha($_POST["senha"]);
+    
+    // Insere o novo cliente no banco de dados
+    if ($cliente->insertBD()) {
+        // Redireciona o usuário para a página de sucesso
+        header("Location: login.html");
+        exit;
+    } else {
+        // Exibe uma mensagem de erro
+        echo "Ocorreu um erro ao cadastrar o cliente.";
+    }
+
 ?>
