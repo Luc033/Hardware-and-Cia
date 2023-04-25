@@ -1,35 +1,4 @@
 <?php
-/*
-// Configuração do banco de dados
-require_once 'Connect.php';
-
-//Insere os dados na tabela cliente
-
-$sql = "INSERT INTO cliente (nome, sobrenome, dataNascimento, rua, numero, complemento, bairro, cidade, estado, cep, cpf_cnpj, telefone, email, senha) VALUES
-('".$_POST['name']."','"
-.$_POST['sobrenome']."', '".$_POST['rua']."', '".$_POST['dataNasc']."', '".$_POST['numero']."', '".$_POST['complemento']."', '".$_POST['bairro']."', '".$_POST['cidade']."', '".$_POST['estado']."', '".$_POST['cep']."', '".$_POST['cpf_cnpj']."', '".$_POST['tel']."', '".$_POST['email']."', '".$_POST['pws']."')";
-
-// se cadastrado com sucesso envia para a pagina de login
-if ($connection->query($sql) === TRUE) {
-    echo '
-    <a href="login.html">
-        <h1 class="w3-button w3-teal">Dados cadastrados com sucesso! </h1><br>
-        <h1> Faça login para continuar</h1>
-
-    </a> 
-    ';
-
-    // se der erro, avisa para refazer o cadastro mantendo na tela de cadastro
-} else {
-    echo '
-    <a href="cadastro.html">
-        <h1 class="w3-button w3-teal">ERRO! </h1>
-    </a> 
-    ';
-    echo $connection->error;
-}
-
-$connection->close();*/
 
 // incluir a classe cliente
 require_once 'Cliente.php';
