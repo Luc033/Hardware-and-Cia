@@ -169,7 +169,6 @@ body {
 }
 
 /* DROPDOWN -> Funcionario relatório*/
-
 .submenu-relatorio{
     display: none;
 }
@@ -186,40 +185,11 @@ body {
   width: 100px;
 }
 
-#offcanvasTLeftLabel {
-  color: var(--cor-fundo);
-}
 
 .offcanvas-body h2 {
-  margin-bottom: 40px;
+  margin-bottom: 20px;
   color: var(--cor-fundo);
   text-transform: uppercase;
-}
-
-.items-filtro {
-  display: flex;
-  justify-content: space-between;
-}
-
-.container-filtro-items a {
-  color: rgba(0, 0, 0, 0.801);
-  text-decoration: none;
-  font-size: 1.1em;
-  font-weight: 400;
-  text-align: left;
-}
-
-.container-filtro-items a:hover {
-  color: var(--cor-fundo);
-  font-weight: bold;
-}
-
-.container-filtro-items-1,
-.container-filtro-items-2 {
-  display: flex;
-  flex-direction: column;
-  gap: 10px;
-  margin: 30px 0;
 }
 
 /* Preço dos produtos */
@@ -235,7 +205,7 @@ body {
   position: relative;
   width: 100%;
   height: 100px;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 
 input[type="range"] {
@@ -356,7 +326,7 @@ input[type="range"]:active::-webkit-slider-thumb {
   font-size: 20px;
 }
 
-.ordenar button:hover {
+.main-btn:hover,.ordenar button:hover {
   scale: 1.02;
   transition: 0.2s;
   background-color: var(--cor-fundo);
@@ -364,6 +334,35 @@ input[type="range"]:active::-webkit-slider-thumb {
 
 .btn-isactive {
   background-color: var(--cor-fundo);
+}
+
+.main-btn {
+  border: none;
+  background-color: white;
+  color: #f95738;
+  border-radius: 10px;
+  padding: 10px;
+  width: 150px;
+  font-size: 20px;
+  font-weight: bold;
+}
+
+.not-true {
+  display: none;
+}
+
+.main-btn:hover {
+  scale: 1.02;
+  transition: 0.2s;
+  background-color: white;
+  text-decoration: underline;
+}
+
+.filtrar {
+  margin-top: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 /* form  */
@@ -379,19 +378,26 @@ input[type="range"]:active::-webkit-slider-thumb {
   width: 12em;
   height: 40px;
   border-radius: 7px 0 0 7px;
-  color: white;
+  color: black;
+  font-weight: 700;
   border: 1px solid black;
 }
 
-.btn-inp-search-nav-header {
+  .btn-inp-search-nav-header {
   border: none;
   border-left: none;
   border-radius: 0 7px 7px 0;
-  width: 8em;
+  width: auto;
   height: 40px;
   background-color: var(--blue-color);
   color: white;
+  font-weight: 700;
   border: 1px solid black;
+  font-size: 0.8em;
+}
+
+.main-btn {
+background-color: var();
 }
 
 /* Card */
@@ -415,20 +421,16 @@ input[type="range"]:active::-webkit-slider-thumb {
 }
 
 .card img {
-  width: 50%;
-  height: 50%;
+  width: 117px;
+  height: 117px;
   margin: 0 auto;
   padding: 10px 0;
-}
-
-.card .branco {
-  height: 59px;
 }
 
 .card h1 {
   font-size: 18px;
   margin-bottom: 10px;
-  font-weight: 500;
+
 }
 
 .card h2 {
@@ -564,30 +566,19 @@ input[type="range"]:active::-webkit-slider-thumb {
 .cad-tel {
   margin: auto;
 }
-.login-body {
-  align-items: center;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  justify-content: center;
-}
 
 .form-login {
-  max-width: 800px;
+  width: min(100%, 750px);
   background-color: var(--blue-color);
   padding: 0;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
   color: white;
   border-radius: 20px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.493);
-  height: 1000px;
 }
 
 .form-login h1 {
   color: white;
-  font-size: 36px;
+  font-size: 26px;
   margin-bottom: 20px;
 }
 
@@ -595,14 +586,15 @@ form .h1-login {
   color: white;
   margin-bottom: 10px;
 }
+
 .form-login h2 {
-  font-size: 24px;
+  font-size: 20px;
   color: rgb(255, 255, 255);
   margin-bottom: 10px;
 }
 
 .form-login h3 {
-  font-size: 24px;
+  font-size: 16px;
   color: rgb(231, 231, 231);
   margin-bottom: 10px;
 }
@@ -614,7 +606,8 @@ form .h1-login {
 }
 
 .form-login input {
-  font-size: 18px;
+  font-size: 14px;
+  width: 100%;
 }
 
 .form-login .olho {
@@ -630,8 +623,8 @@ form .h1-login {
 }
 
 .form-login label {
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 14px;
+  margin-top: 10px;
 }
 
 .form-login button {
@@ -683,24 +676,22 @@ form .h1-login {
 }
 
 .form-cadastro {
-  width: max(70%, 400px);
+  width: min(100%, 650px);
   background-color: var(--blue-color);
-  padding: 15px 60px;
+  padding: 50px 30px;
   display: flex;
   flex-direction: row;
   align-items: center;
   color: white;
   border-radius: 20px;
   box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.493);
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
+  margin: 30px auto;
 }
 
 .form-adm {
   background-color: var(--dark-orange-color);
 }
+
 .form-func {
   background-color: var(--light-orange-color);
 }
@@ -710,7 +701,7 @@ form .h1-login {
 }
 
 .has-cadaster a {
-  color: white;
+  color: #ffae67;
   font-weight: bold;
   text-decoration: none;
 }
@@ -735,6 +726,7 @@ form .h1-login {
 @media (max-width: 992px) {
   .search-header .inp-search-nav {
     width: 100px;
+    color: black;
   }
 
   .search-header .btn-inp-search-nav-header {
@@ -752,20 +744,17 @@ form .h1-login {
   }
 
   .card h1 {
-    font-size: 15px;
+    font-size: 12px;
   }
 
   .card h2 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .card a {
-    font-size: 15px;
+    font-size: 12px;
   }
 
-  .card .branco {
-    height: 48.5px;
-  }
 
   /* News Letter */
   .news-letter input {
