@@ -22,7 +22,6 @@
 
     <!-- Bootstrap Icons -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
-    
 
     <!-- FONT-FAMILY-->
     <!-- Poppins -->
@@ -42,20 +41,23 @@
 </head>
 
 <body>
-    <!-- NAVBAR--> 
+
     <header class="header-principal">
+        <a href="index.html"><img class="logo-header" src="imagens/logo-sombra.png" alt=""></a>
+        <form action="" method="" class="form-search-header">
+            <input class="inp-search-nav" id="inp-search-nav" autocomplete="off" placeholder="Buscar..." type="text"
+                name="" value="">
+            <button type="submit" class="btn-inp-search-nav-header" name="">Pesquisar</button>
+        </form>
+        <!-- NAVBAR-->
+
         <nav class="nav-header">
-            <div class="logo-img">
-                <a href="index.html">
-                    <img class="logo-header" src="imagens/logo-sombra.png" alt="Logo E-commerce">
-                </a>
-            </div>
-            <ul class="dropd-logado">
-                <li class="dropli"><i class="icon-navbar bi bi-person-circle"></i><strong><!-- AQUI ENTRA O PHP ALTERANDO PARA O NOME DO USUÁRIO --><label for="">Conta</label></strong></li>
-                <ul class="dropd-content">
-                    <li><a href="#"><i class="icon-subnavbar bi bi-cart-fill icon-list-header"></i>Carrinho</a></li>
-                    <li><a href="#"><i class="icon-subnavbar bi bi-box-seam-fill icon-list-header"></i>Pedidos</a></li>
-                    <li><a href="#"><i class="icon-subnavbar bi bi-x-circle-fill icon-list-header"></i>Sair</a></li>
+            <ul>
+                <li class="dropli"><i class="icon-navbar bi bi-person-circle"></i>Conta</li>
+                <ul class="dropdown-content">
+                    <li><a href="#"><i class="icon-navbar bi bi-bag-fill icon-list-header"></i>Carrinho</a></li>
+                    <li><a href="#"><i class="icon-navbar bi bi-bookmark-heart-fill icon-list-header"></i>Favoritos</a></li>
+                    <li><a href="#"><i class="icon-navbar bi bi-x-circle-fill icon-list-header"></i>Sair</a></li>
                 </ul>
             </ul>
         </nav>
@@ -63,63 +65,42 @@
 
     <main>
         <div class="container-fluid container-card">
-            <div class="start-main container-fluid">
-                <button class="btn-filter btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">Filtrar</button>
-                <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
-                    <div class="offcanvas-header">
-                        <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
-                    </div>
-                    <div class="offcanvas-body">
-                        <div>
-                            <h2 class="text-center">Preço do produto</h2>
-                            <div class="wrapper">
-                                <div class="values">
-                                    <span id="range1">
-                                        0
-                                    </span>
-                                    <span> &dash; </span>
-                                    <span id="range2">
-                                        100
-                                    </span>
-                                </div>
-                                <div class="container-range">
-                                    <div class="slider-track">
-                                        <input type="range" min="20" max="7000" value="1500" id="slider-1" oninput="slideOne()">
-                                        <input type="range" min="20" max="7000" value="5500" id="slider-2" oninput="slideTwo()">
-                                    </div>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
-                            <h2 class="text-center">Ordenar por</h2>
-                            <div class="ordenar">
-                                <button id="menorPreco">Menor preço</button>
-                                <button id="maiorPreco">Maior preço</button>
-                            </div>
-                        </div>
-
-                        <div>
-                            <div class="filtrar">
-                                <button id="filter-btn" class="main-btn">
-                                    Filtrar
-                                </button>
-                            </div>  
-                        </div>
-                        
+            <div class="linha-card">
+                <div class="card">
+                    <img class="card-img-top" src="imagens/thumb_tv_p1e_43_1_1.png" alt="Imagem do produto">
+                    <div class="card-body">
+                        <h1>Televisão XIAOMI P1E 43"</h1>
+                        <h2>R$1799,99</h2>
+                        <p>À vista no PIX</p>
+                        <div class="branco"></div>
+                        <a href="#" class="btn card-btn"><i class="bi bi-cart3"></i> Comprar</a>
                     </div>
                 </div>
-                <form class="form-search">
-                    <input class="inp-search-nav inputSearch" id="inp-search-nav" autocomplete="off" placeholder="Buscar..." type="text"
-                        name="" value="">
-                    <button type="submit" class="main-btn btn-primary btn-inp-search-nav-header" name="">Pesquisar</button>
-                </form>
+                <div class="card">
+                    <img class="card-img-top" src="imagens/celular-sansung.jpg" alt="Imagem do produto">
+                    <div class="card-body">
+                        <h1>Televisão XIAOMI P1E 43"</h1>
+                        <h2>R$1799,99</h2>
+                        <p>À vista no PIX</p>
+                        <div class="branco"></div>
+                        <a href="#" class="btn card-btn"><i class="bi bi-cart3"></i> Comprar</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="imagens/notebook-dell.avif" alt="Imagem do produto">
+                    <div class="card-body">
+                        <h1>Televisão XIAOMI P1E 43"</h1>
+                        <h2>R$1799,99</h2>
+                        <p>À vista no PIX</p>
+                        <div class="branco"></div>
+                        <a href="#" class="btn card-btn"><i class="bi bi-cart3"></i> Comprar</a>
+                    </div>
+                </div>
             </div>
-            <!-- Local para ficar os cards individuais -->
-            <div class="linha-card"></div>
         </div>
 
         <div class="news-letter" id="news-area">
-            <div class="container-fluid container-md">
+            <div class="container">
                 <div class="row">
                     <div class="col-md-6 news-text">
                         <h1>Se cadastre para receber as novidades</h1>
@@ -165,7 +146,7 @@
         </div>
 
         <div class="footer" id="footer-area">
-            <div class="container-md container-fluid logo-footer">
+            <div class="container logo-footer">
                 <div class="logo-img">
                     <img src="imagens/logo-sombra.png" alt="logo e-commerce">
                 </div>

@@ -42,7 +42,7 @@
 </head>
 
 <body>
-    <!-- NAVBAR-->
+    <!-- NAVBAR--> 
     <header class="header-principal">
         <nav class="nav-header">
             <div class="logo-img">
@@ -50,18 +50,14 @@
                     <img class="logo-header" src="imagens/logo-sombra.png" alt="Logo E-commerce">
                 </a>
             </div>
-            <div class="login-header">
-                <a class="btn-header btn-cadastro" href="cadastro.html" rel="next" >Cadastrar</a>
-                <div class="btn-login dropdown">
-                    <a class=" btn-header" type="butto
-                    " data-bs-toggle="dropdown" aria-expanded="false" href="login.html" rel="next">Login</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="login.html">Cliente</a></li>
-                        <li><a href="login func.html">Funcionário</a></li>
-                        <li><a href="login adm.html">ADM</a></li>
-                    </ul>
-                </div>
-            </div>
+            <ul class="dropd-logado">
+                <li class="dropli"><i class="icon-navbar bi bi-person-circle"></i><strong><!-- AQUI ENTRA O PHP ALTERANDO PARA O NOME DO USUÁRIO --><label for="">Conta</label></strong></li>
+                <ul class="dropd-content">
+                    <li><a href="#"><i class="icon-subnavbar bi bi-box-seam-fill icon-list-header"></i>Produtos</a></li>
+                    <li><a href="#"><i class="icon-subnavbar bi bi-table icon-list-header"></i>Relatórios</a></li>
+                    <li><a href="#"><i class="icon-subnavbar bi bi-x-circle-fill icon-list-header"></i>Sair</a></li>
+                </ul>
+            </ul>
         </nav>
     </header>
 
@@ -130,8 +126,37 @@
                     <button type="submit" class="main-btn btn-primary btn-inp-search-nav-header" name="">Pesquisar</button>
                 </form>
             </div>
-            <div class="linha-card" id="linha-card">   
-                
+            <div class="linha-card">   
+                <div class="card">
+                    <img class="card-img-top" src="imagens/thumb_tv_p1e_43_1_1.png" alt="Imagem do produto">
+                    <div class="card-body">
+                        <h1>Televisão XIAOMI P1E 43"</h1>
+                        <h2>R$1799,99</h2>
+                        <p>À vista no PIX</p>
+                        <div class="branco"></div>
+                        <a href="#" class="btn card-btn"><i class="bi bi-cart3"></i> Comprar</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="imagens/celular-sansung.jpg" alt="Imagem do produto">
+                    <div class="card-body">
+                        <h1>Televisão XIAOMI P1E 43"</h1>
+                        <h2>R$1799,99</h2>
+                        <p>À vista no PIX</p>
+                        <div class="branco"></div>
+                        <a href="#" class="btn card-btn"><i class="bi bi-cart3"></i> Comprar</a>
+                    </div>
+                </div>
+                <div class="card">
+                    <img class="card-img-top" src="imagens/notebook-dell.avif" alt="Imagem do produto">
+                    <div class="card-body">
+                        <h1>Televisão XIAOMI P1E 43"</h1>
+                        <h2>R$1799,99</h2>
+                        <p>À vista no PIX</p>
+                        <div class="branco"></div>
+                        <a href="#" class="btn card-btn"><i class="bi bi-cart3"></i> Comprar</a>
+                    </div>
+                </div>
             </div>
         </div>
 
