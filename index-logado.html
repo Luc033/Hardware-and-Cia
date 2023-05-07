@@ -46,7 +46,7 @@
     <header class="header-principal">
         <nav class="nav-header">
             <div class="logo-img">
-                <a href="index.html">
+                <a href="index-logado.html">
                     <img class="logo-header" src="imagens/logo-sombra.png" alt="Logo E-commerce">
                 </a>
             </div>
@@ -93,8 +93,14 @@
                         <div>
                             <h2 class="text-center">Ordenar por</h2>
                             <div class="ordenar">
-                                <button id="menorPreco">Menor preço</button>
-                                <button id="maiorPreco">Maior preço</button>
+                                <div>
+                                    <label for="cresc">Preço Crescente</label>
+                                    <input type="radio" name="ordenarPor" id="cresc" value="cresc">
+                                </div>
+                                <div>
+                                    <label for="decresc">Preço Decrescente</label>
+                                    <input type="radio" name="ordenarPor" id="decresc" value="decresc">
+                                </div>
                             </div>
                         </div>
 
@@ -109,9 +115,8 @@
                     </div>
                 </div>
                 <form class="form-search">
-                    <input class="inp-search-nav inputSearch" id="inp-search-nav" autocomplete="off" placeholder="Buscar..." type="text"
-                        name="" value="">
-                    <button type="submit" class="main-btn btn-primary btn-inp-search-nav-header" name="">Pesquisar</button>
+                    <input type="text" class="inp-search-nav inputSearch" id="inp-search-nav" placeholder="Buscar..." >
+                    <button class="main-btn btn-primary btn-inp-search-nav-header" id="inp-search-nav-submit" >Buscar</button>
                 </form>
             </div>
             <!-- Local para ficar os cards individuais -->

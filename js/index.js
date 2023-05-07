@@ -60,25 +60,40 @@ produtos.map((produto) => {
     return true
 })
 
+
+
+//criando o menu de filtro
 const filtro = document.querySelector("#filter-btn")
 
 filtro.addEventListener("click", () => {
-  
-
-    console.log("funfo")
 
     const range1 = document.querySelector("#slider-1").value
     const range2 = document.querySelector("#slider-2").value
   
-    const menorPreco = document.querySelector("#menorPreco")
-    const maiorPreco = document.querySelector("#maiorPreco")
-  
-    console.log(range1, range2, menorPreco, maiorPreco)
+    const cresc = document.querySelector("#cresc")
+    const decresc = document.querySelector("#decresc")
+
+    if (cresc.checked) {
+      const prodPrecCresc = produtos.sort(function(a, b) {
+        if(a.price < b.price) {
+          return -1
+        } else {
+          return true
+        }
+      })
+    } else if(decresc.checked) {
+      const prodPrecDecresc = produtos.sort(function(a, b) {
+        if(b.price < a.price) {
+          return -1
+        } else {
+          return true
+        }
+      })
+    } 
   
     containerProducts.innerHTML = ""
   
     produtos.filter((produto) => {
-
       if(range1 < produto.price && produto.price < range2) {
       containerProducts.innerHTML += 
       `
@@ -98,6 +113,32 @@ filtro.addEventListener("click", () => {
     })
   }
 )
+
+//Menu de busca de produtos 
+const search = document.querySelector("#inp-search-nav")
+const searchSubmit = document.querySelector("#inp-search-nav-submit")
+
+search.addEventListener("input", (e) => {
+  containerProducts.innerHTML = ""
+  
+  produtos.forEach((produto) => {
+
+    if(produto.name.toLowerCase().includes(search.value)) {
+    containerProducts.innerHTML += 
+    `
+    <div class="card" />
+      <img class="card-img-top" src="imagens/${produto.imageURL}" alt="${produto.name}">
+        <div class="card-body">
+          <h1>${produto.name}</h1>
+          <h2>R$${produto.price}</h2>
+          <p>À vista no PIX</p>
+          <a href="#" class="btn card-btn" style="display:block"><i class="bi bi-cart3"></i> Comprar</a>
+        </div>
+    </div>
+    ` 
+    } 
+  })
+})
  
 //mudando componentes de responsividade do site
 let largura = document.querySelector("body").clientWidth
@@ -158,12 +199,3 @@ function fillColor () {
   percent2 = (sliderTwo.value / sliderMaxValue) * 100
   sliderTrack.style.background = `linear-gradient(to right, #dadae5 ${percent1}%, #f95738 ${percent1}%, #f95738  ${percent2}%, #dadae5 ${percent2}%)`
 }
-
-
-
-
-
-
-
-
-

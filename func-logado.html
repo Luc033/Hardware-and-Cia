@@ -55,7 +55,7 @@
     <header class="header-principal">
       <nav class="nav-header">
         <div class="logo-img">
-          <a href="index.html">
+          <a href="func-logado.html">
             <img
               class="logo-header"
               src="imagens/logo-sombra.png"
@@ -75,22 +75,12 @@
           </li>
           <ul class="dropd-content">
             <li>
-              <button class="btn btn-default" id="btn-dropd-relatorio">
-                <i class="icon-subnavbar bi bi-table icon-list-header"></i
-                >Relatórios
-              </button>
-              <ul class="submenu-relatorio">
-                <li >
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    Relatório 1
-                  </a>
-                </li>
-                <li >
-                  <a href="#" target="_blank" rel="noopener noreferrer">
-                    Relatório 2
-                  </a>
-                </li>
-              </ul>
+              <a href="relatorios-func.html">
+                <button class="btn btn-default" id="btn-dropd-relatorio">
+                  <i class="icon-subnavbar bi bi-table icon-list-header"></i
+                  >Relatórios
+                </button>
+              </a>
             </li>
             <li>
               <a href="#"
@@ -107,158 +97,90 @@
 
     <main>
       <div class="container-fluid container-card">
-        <div class="start-main container-fluid">
-          <button
-            class="btn-filter btn btn-primary"
-            type="button"
-            data-bs-toggle="offcanvas"
-            data-bs-target="#offcanvasLeft"
-            aria-controls="offcanvasLeft"
-          >
-            Filtrar
-          </button>
-          <div
-            class="offcanvas offcanvas-start"
-            tabindex="-1"
-            id="offcanvasLeft"
-            aria-labelledby="offcanvasLeftLabel"
-          >
-            <div class="offcanvas-header">
-              <button
-                type="button"
-                class="btn-close text-reset"
-                data-bs-dismiss="offcanvas"
-                aria-label="Close"
-              ></button>
-            </div>
-            <div class="offcanvas-body">
-              <div>
-                <h2 class="text-center">Filtrar por</h2>
-                <div class="text-center row items-filtro">
-                  <div
-                    class="container-filtro-items container-filtro-items-1 col-5"
-                  >
-                    <a href="#">Headset</a>
-                    <a href="#">Mouse</a>
-                    <a href="#">Teclado</a>
-                    <a href="#">MousePad</a>
-                    <a href="#">Celular</a>
-                    <a href="#">Computador</a>
+          <div class="start-main container-fluid">
+              <button class="btn-filter btn btn-primary" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasLeft" aria-controls="offcanvasLeft">Filtrar</button>
+              <div class="offcanvas offcanvas-start" tabindex="-1" id="offcanvasLeft" aria-labelledby="offcanvasLeftLabel">
+                  <div class="offcanvas-header">
+                      <button type="button" class="btn-close text-reset" data-bs-dismiss="offcanvas" aria-label="Close"></button>
                   </div>
-                  <div
-                    class="container-filtro-items container-filtro-items-2 col-5"
-                  >
-                    <a href="#">Monitor</a>
-                    <a href="#">Fones de ouvido</a>
-                    <a href="#">Televisão</a>
-                    <a href="#">Roteadores</a>
-                    <a href="#">Memórias SSd</a>
-                    <a href="#">Memória Ram</a>
+                  <div class="offcanvas-body">
+                      <div>
+                          <h2 class="text-center">Preço do produto</h2>
+                          <div class="wrapper">
+                              <div class="values">
+                                  <span id="range1">
+                                      0
+                                  </span>
+                                  <span> &dash; </span>
+                                  <span id="range2">
+                                      100
+                                  </span>
+                              </div>
+                              <div class="container-range">
+                                  <div class="slider-track">
+                                      <input type="range" min="20" max="7000" value="1500" id="slider-1" oninput="slideOne()">
+                                      <input type="range" min="20" max="7000" value="5500" id="slider-2" oninput="slideTwo()">
+                                  </div>
+                              </div>
+                          </div>
+                      </div>
+                      <div>
+                          <h2 class="text-center">Ordenar por</h2>
+                          <div class="ordenar">
+                              <div>
+                                  <label for="cresc">Preço Crescente</label>
+                                  <input type="radio" name="ordenarPor" id="cresc" value="cresc">
+                              </div>
+                              <div>
+                                  <label for="decresc">Preço Decrescente</label>
+                                  <input type="radio" name="ordenarPor" id="decresc" value="decresc">
+                              </div>
+                          </div>
+                      </div>
+
+                      <div>
+                          <div class="filtrar">
+                              <button id="filter-btn" class="main-btn">
+                                  Filtrar
+                              </button>
+                          </div>  
+                      </div>
+                      
                   </div>
-                </div>
               </div>
-              <div>
-                <h2 class="text-center">Preço do produto</h2>
-                <div class="wrapper">
-                  <div class="values">
-                    <span id="range1"> 0 </span>
-                    <span> &dash; </span>
-                    <span id="range2"> 100 </span>
-                  </div>
-                  <div class="container-range">
-                    <div class="slider-track">
-                      <input
-                        type="range"
-                        min="20"
-                        max="3000"
-                        value="500"
-                        id="slider-1"
-                        oninput="slideOne()"
-                      />
-                      <input
-                        type="range"
-                        min="20"
-                        max="3000"
-                        value="1500"
-                        id="slider-2"
-                        oninput="slideTwo()"
-                      />
-                    </div>
-                  </div>
-                </div>
-              </div>
-              <div>
-                <h2 class="text-center">Ordenar por</h2>
-                <div class="ordenar">
-                  <button id="menorPreco">Menor preço</button>
-                  <button id="maiorPreco">Maior preço</button>
-                </div>
-              </div>
-            </div>
+              <form class="form-search">
+                  <input type="text" class="inp-search-nav inputSearch" id="inp-search-nav" placeholder="Buscar...">
+                  <button class="main-btn btn-primary btn-inp-search-nav-header" id="inp-search-nav-submit">Buscar</button>
+              </form>
           </div>
-          <form class="form-search">
-            <input
-              class="inp-search-nav inputSearch"
-              id="inp-search-nav"
-              autocomplete="off"
-              placeholder="Buscar..."
-              type="text"
-              name=""
-              value=""
-            />
-            <button
-              type="submit"
-              class="main-btn btn-primary btn-inp-search-nav-header"
-              name=""
-            >
-              Pesquisar
-            </button>
-          </form>
-        </div>
-        <!-- Local para ficar os cards individuais -->
-        <div class="linha-card"></div> 
+          <!-- Local para ficar os cards individuais -->
+          <div class="linha-card"></div>
       </div>
 
       <div class="news-letter" id="news-area">
-        <div class="container-fluid container-md">
-          <div class="row">
-            <div class="col-md-6 news-text">
-              <h1>Se cadastre para receber as novidades</h1>
-              <p>
-                Seja o primeiro a saber sobre as ofertas e novidades da empresa
-                assinando nossa Newsletter
-              </p>
-            </div>
+          <div class="container-fluid container-md">
+              <div class="row">
+                  <div class="col-md-6 news-text">
+                      <h1>Se cadastre para receber as novidades</h1>
+                      <p>Seja o primeiro a saber sobre as ofertas e novidades da empresa assinando nossa Newsletter
+                      </p>
+                  </div>
 
-            <div class="col-md-6">
-              <form action="get" class="needs-validation" novalidate>
-                <label for="news-name" class="form-label">Nome</label>
-                <input
-                  type="text"
-                  name="news-nam"
-                  id="news-nam"
-                  class="form-control"
-                  placeholder="ex: João da Silva"
-                  required
-                />
-                <label for="news-email" class="form-label"
-                  >Seu melhor E-mail</label
-                >
-                <input
-                  type="email"
-                  name="news-email"
-                  id="news-email"
-                  class="form-control"
-                  placeholder="ex: joaosilva@gmail.com"
-                  required
-                />
-                <button type="submit" class="btn">Enviar</button>
-              </form>
-            </div>
+                  <div class="col-md-6 ">
+                      <form action="get" class="needs-validation" novalidate>
+                          <label for="news-name" class="form-label">Nome</label>
+                          <input type="text" name="news-nam" id="news-nam" class="form-control"
+                              placeholder="ex: João da Silva" required>
+                          <label for="news-email" class="form-label">Seu melhor E-mail</label>
+                          <input type="email" name="news-email" id="news-email" class="form-control"
+                              placeholder="ex: joaosilva@gmail.com" required>
+                          <button type="submit" class="btn ">Enviar</button>
+                      </form>
+                  </div>
+              </div>
           </div>
-        </div>
       </div>
-    </main>
+  </main>
 
     <footer>
       <div id="social-area" class="social">

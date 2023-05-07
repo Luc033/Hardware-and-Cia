@@ -312,18 +312,17 @@ input[type="range"]:active::-webkit-slider-thumb {
 /* Ordenar por */
 .ordenar {
   display: flex;
+  flex-direction: column;
   text-align: center;
-  justify-content: space-around;
+  justify-content: center;
+  width: 100%;
 }
 
-.ordenar button {
-  border: none;
-  background-color: var(--blue-color);
-  color: white;
-  border-radius: 10px;
-  padding: 10px;
-  width: 150px;
-  font-size: 20px;
+.ordenar label {
+  font-size: 18px;
+  font-weight: bold;
+  width: 74%;
+  text-align: left;
 }
 
 .main-btn:hover,.ordenar button:hover {
@@ -341,7 +340,7 @@ input[type="range"]:active::-webkit-slider-thumb {
   background-color: white;
   color: #f95738;
   border-radius: 10px;
-  padding: 10px;
+  padding-bottom: px;
   width: 150px;
   font-size: 20px;
   font-weight: bold;
@@ -394,6 +393,11 @@ input[type="range"]:active::-webkit-slider-thumb {
   font-weight: 700;
   border: 1px solid black;
   font-size: 0.8em;
+}
+
+.btn-inp-search-nav-header:hover {
+  background-color: #2f66fd;
+  text-decoration: none;
 }
 
 .main-btn {

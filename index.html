@@ -75,27 +75,6 @@
                     </div>
                     <div class="offcanvas-body">
                         <div>
-                            <h2 class="text-center">Filtrar por</h2>
-                            <div class="text-center row items-filtro">
-                                <div class="container-filtro-items container-filtro-items-1 col-5">
-                                    <a href="#">Headset</a>
-                                    <a href="#">Mouse</a>
-                                    <a href="#">Teclado</a>
-                                    <a href="#">MousePad</a>
-                                    <a href="#">Celular</a>
-                                    <a href="#">Computador</a>
-                                </div>
-                                <div class="container-filtro-items container-filtro-items-2 col-5">
-                                    <a href="#">Monitor</a>
-                                    <a href="#">Fones de ouvido</a>
-                                    <a href="#">Televisão</a>
-                                    <a href="#">Roteadores</a>
-                                    <a href="#">Memórias SSd</a>
-                                    <a href="#">Memória Ram</a>
-                                </div>
-                            </div>
-                        </div>
-                        <div>
                             <h2 class="text-center">Preço do produto</h2>
                             <div class="wrapper">
                                 <div class="values">
@@ -109,8 +88,8 @@
                                 </div>
                                 <div class="container-range">
                                     <div class="slider-track">
-                                        <input type="range" min="20" max="3000" value="500" id="slider-1" oninput="slideOne()">
-                                        <input type="range" min="20" max="3000" value="1500" id="slider-2" oninput="slideTwo()">
+                                        <input type="range" min="20" max="7000" value="1500" id="slider-1" oninput="slideOne()">
+                                        <input type="range" min="20" max="7000" value="5500" id="slider-2" oninput="slideTwo()">
                                     </div>
                                 </div>
                             </div>
@@ -118,21 +97,34 @@
                         <div>
                             <h2 class="text-center">Ordenar por</h2>
                             <div class="ordenar">
-                                <button id="menorPreco">Menor preço</button>
-                                <button id="maiorPreco">Maior preço</button>
+                                <div>
+                                    <label for="cresc">Preço Crescente</label>
+                                    <input type="radio" name="ordenarPor" id="cresc" value="cresc">
+                                </div>
+                                <div>
+                                    <label for="decresc">Preço Decrescente</label>
+                                    <input type="radio" name="ordenarPor" id="decresc" value="decresc">
+                                </div>
                             </div>
                         </div>
+
+                        <div>
+                            <div class="filtrar">
+                                <button id="filter-btn" class="main-btn">
+                                    Filtrar
+                                </button>
+                            </div>  
+                        </div>
+                        
                     </div>
                 </div>
                 <form class="form-search">
-                    <input class="inp-search-nav inputSearch" id="inp-search-nav" autocomplete="off" placeholder="Buscar..." type="text"
-                        name="" value="">
-                    <button type="submit" class="main-btn btn-primary btn-inp-search-nav-header" name="">Pesquisar</button>
+                    <input type="text" class="inp-search-nav inputSearch" id="inp-search-nav" placeholder="Buscar...">
+                    <button class="main-btn btn-primary btn-inp-search-nav-header" id="inp-search-nav-submit">Buscar</button>
                 </form>
             </div>
-            <div class="linha-card" id="linha-card">   
-                
-            </div>
+            <!-- Local para ficar os cards individuais -->
+            <div class="linha-card"></div>
         </div>
 
         <div class="news-letter" id="news-area">
