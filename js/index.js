@@ -123,7 +123,7 @@ search.addEventListener("input", (e) => {
   
   produtos.forEach((produto) => {
 
-    if(produto.name.toLowerCase().includes(search.value)) {
+    if(produto.name.toLowerCase().includes(search.value.toLowerCase())) {
     containerProducts.innerHTML += 
     `
     <div class="card" />
