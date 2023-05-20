@@ -86,6 +86,12 @@ const produtos = [
     name: "Memória Kingston Fury Beast 8GB",
     price: "149,99"
   },
+  {
+    id: 12,
+    imageURL: "fonte.jpg",
+    name: "Fonte Redragon RGPS, 600W",
+    price: "149,99"
+  },
   
 ]
  
