@@ -434,18 +434,21 @@ background-color: var();
 .card h1 {
   font-size: 18px;
   margin-bottom: 10px;
-
+  min-height: 50px;
+  text-align: center;
 }
 
 .card h2 {
   color: var(--dark-green-color);
   font-size: 25px;
   font-weight: bold;
+  text-align: center;
 }
 
 .card p {
   color: rgba(0, 0, 0, 0.599);
   font-size: 16px;
+  text-align: center;
 }
 
 .card a {
@@ -725,7 +728,6 @@ form .h1-login {
   text-decoration: underline;
 }
 
-
 .carrinho-main{
   background-image: radial-gradient(circle, var(--beje-color) 0%, var(--yellow-color) 1000%);
   border-radius: 5px;
@@ -795,10 +797,12 @@ form .h1-login {
     margin: 0 0 35px 0;
     padding: 20px 0;
   }
+
   .dropd-logado {
     margin: auto;
     padding: 20px 40px; 
   }
+
   .logo-img {
     width: 1.1em;
   }
@@ -813,16 +817,20 @@ form .h1-login {
   }
 
   .card {
-    width: 45%;
+    width: 40%;
     margin: 10px;
   }
 
   .card h2 {
-    font-size: 20px;
+    font-size: 16px;
   }
 
   .card a {
-    font-size: 15px;
+    font-size: 10px;
+  }
+
+  .card p {
+    font-size: 12px;
   }
 
   .card .branco {
