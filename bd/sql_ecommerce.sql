@@ -79,7 +79,8 @@ create table administrador(
 		idProduto int primary key auto_increment,
         nomeProduto varchar(50) not null,
         categoria enum('Headset', 'Mouse', 'Teclado', 'Notebook', 'Monitor', 'SSD', 'RAM') not null,
-        valor float not null unique
+        valor float not null unique,
+        ImageUrl varchar(40) not null
 	);
     alter table produto auto_increment=1;
 

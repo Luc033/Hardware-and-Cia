@@ -92,7 +92,6 @@ const produtos = [
     name: "Fonte Redragon RGPS, 600W",
     price: '149,90'
   },
-  
 ]
  
 // Exibindo os produtos individuais 
@@ -108,14 +107,20 @@ produtos.map((produto) => {
           <h1>${produto.name}</h1>
           <h2>R$${produto.price}</h2>
           <p>À vista no PIX</p>
-          <a href="./login" id="btn-cart" class="btn card-btn" style="display: block"><i class="bi bi-cart3"></i> Comprar</a>
+          <a href="#" class="btn card-btn" id="btn-cart" style="display: block"><i class="bi bi-cart3"></i> Comprar</a>
         </div>
     </div>
     ` 
     return true
 })
 
+const btncarts = document.querySelectorAll("#btn-cart")
 
+btncarts.forEach((button) => {
+    button.addEventListener("click", () => {
+        alert("Produto adicionado ao carrinho com sucesso!")
+    })
+})
 
 //criando o menu de filtro
 const filtro = document.querySelector("#filter-btn")
@@ -194,7 +199,7 @@ search.addEventListener("input", (e) => {
     } 
   })
 })
- 
+
 //mudando componentes de responsividade do site
 let largura = document.querySelector("body").clientWidth
 let imagemLogo = document.querySelector(".logo-header")
