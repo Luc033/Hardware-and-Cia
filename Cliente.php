@@ -158,6 +158,7 @@ Class cliente{
     }
 
     //Inserir dados no banco de dados (cadastro)
+    //Inserir dados no banco de dados (cadastro)
     public function insertBD()
     {
         require_once 'ConnectBD.php';
@@ -180,6 +181,7 @@ Class cliente{
             return FALSE;
         }
     }
+
 
     /*Fazer login (?????)
     public function login();

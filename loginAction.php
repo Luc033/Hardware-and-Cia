@@ -1,42 +1,48 @@
 <?php
 
-// Configuração do banco de dados
-$servername = "localhost";
-$username = "usuario"; //usuario bd
-$password = "senha"; // senha do bd
-$dbname = "ecommerce"; // nome do bd
+// Inicie a sessão
+session_start();
 
-// Cria a conexão com o banco de dados
-$conn = new mysqli($servername, $username, $password, $dbname);
+// Verifique se a requisição foi feita usando o método POST
+if ($_SERVER["REQUEST_METHOD"] === "POST") {
+    // Recupere os dados do formulário
+    $email = $_POST["email"];
+    $senha = $_POST["pws"];
 
-// Verifica se a conexão ocorreu sem problemas
-if ($conn->connect_error) {
-  die("Erro na conexão: " . $conn->connect_error);
-}
+    // Conexão com o banco de dados (exemplo usando MySQLi)
+    $servername = "localhost"; // Altere com o nome do servidor do seu banco de dados
+    $username = "root"; // Altere com o nome de usuário do seu banco de dados
+    $password = ""; // Altere com a senha do seu banco de dados
+    $database = "ecommerce"; // Altere com o nome do seu banco de dados
 
-// deixa escapar os caracteres especiais presentes em uma string permitindo consulta segura
-$email = mysqli_real_escape_string($conn, $_POST['email']);
+    // Cria a conexão
+    $conn = new mysqli($servername, $username, $password, $database);
 
-// prepared statements para separar as instruções SQL da entrada do usuário ( evita SQL injection)
-$stmt = $conn->prepare("SELECT * FROM cliente WHERE email = ?");
-$stmt->bind_param("s", $email);
-$stmt->execute();
-$resultado = $stmt->get_result();
-
-if ($row = mysqli_fetch_array($resultado)) {
-    if (password_verify($_POST['pws'], $row['senha'])) {
-      // Login bem-sucedido, redireciona o usuário para a página inicial
-      header("Location: index-logado.html");
-    } else {
-      // Senha incorreta, exibe uma mensagem de erro
-      echo "Senha incorreta";
+    // Verifica se houve algum erro na conexão
+    if ($conn->connect_error) {
+        die("Erro na conexão com o banco de dados: " . $conn->connect_error);
     }
-  } else {
-    // Nome de usuário não encontrado, exibe uma mensagem de erro
-    echo "Usuário não encontrado";
-  }
-// fechar as conexões para evitar vazamento de memória
-$stmt->close();
-$conn->close();
 
+    // Consulte o banco de dados para verificar o email e a senha
+    $consulta = "SELECT * FROM usuarios WHERE email = '$email' AND senha = '$senha'";
+    $resultado = $conn->query($consulta);
+
+    // Verifique se a consulta retornou algum resultado
+    if ($resultado-> num_rows = 1) {
+        // Email e senha válidos
+
+        // Inicie a sessão e armazene o email do usuário
+        $_SESSION["email"] = $email;
+
+        // Redirecione para a página de index logado
+        header("Location: index-logado.html");
+        exit(); // Certifique-se de sair do script após o redirecionamento
+    } else {
+        // Email ou senha inválidos, exiba uma mensagem de erro ou redirecione para uma página de erro, se desejar
+        echo "Email ou senha inválidos";
+    }
+
+    // Feche a conexão com o banco de dados
+    $conexao->close();
+}
 ?>
