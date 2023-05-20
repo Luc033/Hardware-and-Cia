@@ -1,10 +1,16 @@
+<!--include do css-->
+<?php 
+include_once 'view\estilos\reset.css';
+include_once 'view\estilos\estilos.css';
+include_once 'view\estilos\userProfile.css';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tela de login - Administrador</title>
+    <title>Perfil</title>
     <!-- reset incluído-->
     <link rel="stylesheet" href="estilos/reset.css" />
 
@@ -44,52 +50,20 @@
       href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
-
-    <!-- Favicon -->
-    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
   </head>
-  <body class="login-body">
-    <div class="form-login form-cadastro form-adm">
-      <form action="" method="">
-        <div class="row">
-          <h1 class="h1-login text-center">ADMINISTRADOR!</h1>
-          <h1 class="text-center">Bem vindo de volta ao nosso E-commerce</h1>
-          <h2 class="text-center">
-            Preencha os campos abaixo para prosseguir com sua conta
-          </h2>
-          <div class="form-group number">
-            <label for="number">ID</label>
-            <input
-              type="number"
-              name="number"
-              class="form-control"
-              id="number"
-              placeholder="Informe seu ID"
-            />
-          </div>
-          <div class="form-group">
-            <label for="password">Senha </label>
-            <div class="senha-view">
-              <input
-                type="password"
-                class="form-control"
-                id="pws"
-                placeholder="Entre com sua senha"
-              />
-              <i id="olho-aberto" class="olho bi bi-eye-fill"></i>
-              <i id="olho-fechado" class="olho bi bi-eye-slash-fill"></i>
-            </div>
-          </div>
-          <a href="#">
-            <button type="submit">Continuar</button>
-          </a>
-          <a class="link-esqueceu-senha" href="#">
-            <p class="text-center">Esqueceu a senha? <u>Clique aqui</u></p>
-          </a>
-        </div>
-      </form>
-    </div>
+  <body>
 
-    <script src="js/login.js"></script>
+    <!--Sessão php-->
+    <?php
+        include_once 'model\Cliente.php';
+        if(!isset($_SESSION))
+        {
+            session_start();
+        }
+    ?>
+    
+    <main>
+    
+    </main>
   </body>
 </html>

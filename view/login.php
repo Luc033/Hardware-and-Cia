@@ -1,10 +1,15 @@
+<!--include do css-->
+<?php 
+include_once 'view\estilos\reset.css';
+include_once 'view\estilos\estilos.css';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Tela de login - Funcionário</title>
+    <title>Tela de login</title>
     <!-- reset incluído-->
     <link rel="stylesheet" href="estilos/reset.css" />
 
@@ -48,22 +53,22 @@
     <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
   </head>
   <body class="login-body">
-    <div class="form-login form-cadastro form-func">
-      <form action="" method="">
+
+    <div class="form-login form-cadastro">
+      <form action="controller\ClienteController.php" method="POST">
         <div class="row">
-          <h1 class="h1-login text-center">FUNCIONÁRIO!</h1>
           <h1 class="text-center">Bem vindo de volta ao nosso E-commerce</h1>
           <h2 class="text-center">
             Preencha os campos abaixo para prosseguir com sua conta
           </h2>
-          <div class="form-group number">
-            <label for="number">ID</label>
+          <div class="form-group email">
+            <label for="email">Endereço de email</label>
             <input
-              type="number"
-              name="number"
+              type="email"
+              name="email"
               class="form-control"
-              id="number"
-              placeholder="Informe seu ID"
+              id="email"
+              placeholder="Entre com seu E-mail"
             />
           </div>
           <div class="form-group">
@@ -82,8 +87,11 @@
           <a href="#">
             <button type="submit">Continuar</button>
           </a>
-          <a class="link-esqueceu-senha" href="#">
-            <p class="text-center">Esqueceu a senha? <u>Clique aqui</u></p>
+          <a class="link-cadastro" href="cadastro.html">
+            <p>
+              Esqueceu a senha? <u>Clique aqui</u> <br>
+              Ainda não possui cadastro? <u>Cadastrar-se</u>
+            </p>
           </a>
         </div>
       </form>

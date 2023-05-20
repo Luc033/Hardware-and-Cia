@@ -1,3 +1,8 @@
+<!--include do css-->
+<?php 
+include_once 'view\estilos\reset.css';
+include_once 'view\estilos\estilos.css';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -42,26 +47,31 @@
 </head>
 
 <body>
-    <!-- NAVBAR-->
+
+    <!--Sessão php-->
+    <?php
+        if(!isset($_SESSION))
+        {
+            session_start();
+        }
+    ?>
+
+    <!-- NAVBAR--> 
     <header class="header-principal">
         <nav class="nav-header">
             <div class="logo-img">
-                <a href="index.html">
+                <a href="index-logado.html">
                     <img class="logo-header" src="imagens/logo-sombra.png" alt="Logo E-commerce">
                 </a>
             </div>
-            <div class="login-header">
-                <a class="btn-header btn-cadastro" href="cadastro.html" rel="next" >Cadastrar</a>
-                <div class="btn-login dropdown">
-                    <a class=" btn-header" type="butto
-                    " data-bs-toggle="dropdown" aria-expanded="false" href="login.html" rel="next">Login</a>
-                    <ul class="dropdown-menu">
-                        <li><a href="login.html">Cliente</a></li>
-                        <li><a href="login func.html">Funcionário</a></li>
-                        <li><a href="login adm.html">ADM</a></li>
-                    </ul>
-                </div>
-            </div>
+            <ul class="dropd-logado">
+                <li class="dropli"><i class="icon-navbar bi bi-person-circle"></i><strong> <input disabled value ="<?php echo unserialize($_SESSION['Cliente'])->getNome();?>"></input><label for="">Conta</label></strong></li>
+                <ul class="dropd-content">
+                    <li><a href="#"><i class="icon-subnavbar bi bi-cart-fill icon-list-header"></i>Carrinho</a></li>
+                    <li><a href="#"><i class="icon-subnavbar bi bi-box-seam-fill icon-list-header"></i>Pedidos</a></li>
+                    <li><a href="#"><i class="icon-subnavbar bi bi-x-circle-fill icon-list-header"></i>Sair</a></li>
+                </ul>
+            </ul>
         </nav>
     </header>
 
@@ -119,7 +129,7 @@
                     </div>
                 </div>
                 <form class="form-search">
-                    <input type="text" class="inp-search-nav inputSearch" id="inp-search-nav" placeholder="Buscar...">
+                    <input type="text" class="inp-search-nav inputSearch" id="inp-search-nav" placeholder="Buscar..." >
                     <button class="main-btn btn-primary btn-inp-search-nav-header" id="inp-search-nav-submit" disabled>Buscar</button>
                 </form>
             </div>

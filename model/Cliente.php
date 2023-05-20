@@ -181,27 +181,25 @@ Class cliente{
         }
     }
 
-    /*Fazer login (?????)
-    public function login();
+    //Consulta dados para sessão do cliente
+    public function showClient()
     {
-        require_once 'ConnectBD.php';
+        require_once 'ConexaoBD.php';
 
-        $con = new ConnectBD();
-        $conn = $con->connection();
-        if ($conn->connect_error){
-            die("Connection Failed: ".$conn->connect_error);
+        $con = new ConexaoBD();
+        $conn = $con->conectar();
+        if ($conn->connect_error)
+        {
+            die("Connection failed: " . $conn->connect_error);
         }
-
-        $sql = "SELECT FROM cliente WHERE email = ".$email;
+        $sql = "SELECT idCliente, nome FROM Cliente;";
         $re = $conn->query($sql);
-        $r = $re->fetch_object();
-        if ($r != NULL){
-            (verificar senha, olhar documentação para fazer isso)
+        $conn->close();
+        return $re;
     }
-    */
 
     //Consultar os dados do banco de dados (perfil do usuário)
-    public function selectBD()
+    public function selectBD($email)
     {
         require_once 'ConnectBD.php';
 
@@ -211,7 +209,7 @@ Class cliente{
             die("Connection Failed: ".$conn->connect_error);
         }
 
-        $sql = "SELECT * FROM cliente WHERE idCliente = ".$idCliente;
+        $sql = "SELECT * FROM cliente WHERE email = ".$email;
         $re = $conn->query($sql);
         $r = $re->fetch_object();
         if ($r != NULL){

@@ -1,0 +1,125 @@
+<!--include do css-->
+<?php 
+include_once 'view\estilos\reset.css';
+include_once 'view\estilos\estilos.css';
+?>
+<!DOCTYPE html>
+<html lang="pt-br">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <!-- reset incluído-->
+        <link rel="stylesheet" href="estilos/reset.css" />
+    
+        <!-- css -->
+        <link rel="stylesheet" href="estilos/style.css" />
+    
+        <!-- BootStrap Css -->
+        <link
+          href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css"
+          rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD"
+          crossorigin="anonymous"
+        />
+    
+        <!-- Bootstrap js -->
+        <script
+          src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+          integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+          crossorigin="anonymous"
+        ></script>
+    
+        <!-- Bootstrap Icons -->
+        <link
+          rel="stylesheet"
+          href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css"
+        />
+    
+        <!-- FONT-FAMILY-->
+        <!-- Poppins -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100&display=swap"
+          rel="stylesheet"
+        />
+    
+        <!-- Roboto -->
+        <link
+          href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+          rel="stylesheet"
+        />
+    
+        <!-- Favicon -->
+        <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon" />
+    
+        <title>Geração de relatórios - Hardware & CIA</title>
+
+        <style>
+            body {
+                width: min(100%, 800px);
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+                margin: auto;
+            }
+
+            h1 {
+                text-align: center;
+                margin: 40px 0;
+                color: #2f66fd;
+                font-weight: bolder;
+            }
+
+            form {
+                display: flex;
+                flex-wrap: wrap;
+                justify-content: center;
+                align-items: center;
+                gap: 1%;
+            }
+
+            h2 {
+                width: 30%;
+                font-size: 20px;
+                margin-bottom: 20px;
+                font-weight: bold;
+            }
+
+            input {
+                width: 30%;
+                font-size: 20px;
+                margin-bottom: 20px;
+            }
+
+            input[type="submit"] {
+                background-color: #2f66fd;
+                color: white;
+                border: 3px solid #f95738;
+                border-radius: 5px;
+
+            }
+
+        </style>
+      </head>
+<body>
+    
+    <h1>Gerar Relatórios (Funcionário)</h1>
+    <div class="relatorios">
+        <div class="vendas">
+            <form>
+                <h2>Relatório de Vendas</h2>
+                <input type="week" name="input-vendas" id="input-vendas">
+                <input type="submit" value="Gerar Relatório">
+            </form>
+        </div>
+        <div class="estoque">
+            <form>
+                <h2>Relatório de Estoque</h2>
+                <input type="month" name="input-estoque" id="input-estoque">
+                <input type="submit" value="Gerar Relatório">
+            </form>
+        </div>
+    </div>
+</body>
+</html>

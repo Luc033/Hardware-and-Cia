@@ -1,3 +1,8 @@
+<!--include do css-->
+<?php 
+include_once 'view\estilos\reset.css';
+include_once 'view\estilos\estilos.css';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -49,12 +54,13 @@
   </head>
   <body class="login-body">
     <div class="form-login form-cadastro">
-      <form action="cadastroAction.php" method="POST">
+      <form action="controller\ClienteController.php" method="POST">
         <div class="row">
           <h1 class="text-center">Cadastre-se Aqui</h1>
           <h3 class="text-center">
             Preencha os campos abaixo para poder criar sua conta
           </h3>
+          
           <div class="form-group col-6">
             <label for="name">Primeiro Nome</label>
             <input
@@ -125,7 +131,7 @@
               type="text"
               name="complemento"
               class="form-control"
-              id="complement"
+              id="complemento"
               placeholder="Complemento"
             />
           </div>

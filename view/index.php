@@ -1,3 +1,5 @@
+<!--include do css-->
+
 <!DOCTYPE html>
 <html lang="pt-br">
 
@@ -6,10 +8,10 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <!-- reset incluído-->
-    <link rel="stylesheet" href="estilos/reset.css">
+    <link rel="stylesheet" href="view/estilos/reset.css">
 
     <!-- css -->
-    <link rel="stylesheet" href="estilos/style.css">
+    <link rel="stylesheet" href="view/estilos/style.css">
 
     <!-- BootStrap Css -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
@@ -42,22 +44,26 @@
 </head>
 
 <body>
-    <!-- NAVBAR--> 
+    <!-- NAVBAR-->
     <header class="header-principal">
         <nav class="nav-header">
             <div class="logo-img">
-                <a href="index-logado.html">
+                <a href="view/index.html">
                     <img class="logo-header" src="imagens/logo-sombra.png" alt="Logo E-commerce">
                 </a>
             </div>
-            <ul class="dropd-logado">
-                <li class="dropli"><i class="icon-navbar bi bi-person-circle"></i><strong><!-- AQUI ENTRA O PHP ALTERANDO PARA O NOME DO USUÁRIO --><label for="">Conta</label></strong></li>
-                <ul class="dropd-content">
-                    <li><a href="#"><i class="icon-subnavbar bi bi-cart-fill icon-list-header"></i>Carrinho</a></li>
-                    <li><a href="#"><i class="icon-subnavbar bi bi-box-seam-fill icon-list-header"></i>Pedidos</a></li>
-                    <li><a href="#"><i class="icon-subnavbar bi bi-x-circle-fill icon-list-header"></i>Sair</a></li>
-                </ul>
-            </ul>
+            <div class="login-header">
+                <a class="btn-header btn-cadastro" href="cadastro.html" rel="next" >Cadastrar</a>
+                <div class="btn-login dropdown">
+                    <a class=" btn-header" type="butto
+                    " data-bs-toggle="dropdown" aria-expanded="false" href="login.html" rel="next">Login</a>
+                    <ul class="dropdown-menu">
+                        <li><a href="login.php">Cliente</a></li>
+                        <li><a href="loginFunc.php">Funcionário</a></li>
+                        <li><a href="loginAdm.php">ADM</a></li>
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
 
@@ -115,7 +121,7 @@
                     </div>
                 </div>
                 <form class="form-search">
-                    <input type="text" class="inp-search-nav inputSearch" id="inp-search-nav" placeholder="Buscar..." >
+                    <input type="text" class="inp-search-nav inputSearch" id="inp-search-nav" placeholder="Buscar...">
                     <button class="main-btn btn-primary btn-inp-search-nav-header" id="inp-search-nav-submit" disabled>Buscar</button>
                 </form>
             </div>
@@ -172,7 +178,7 @@
         <div class="footer" id="footer-area">
             <div class="container-md container-fluid logo-footer">
                 <div class="logo-img">
-                    <img src="imagens/logo-sombra.png" alt="logo e-commerce">
+                    <img src="..\imagens\logo-sombra.png" alt="logo e-commerce">
                 </div>
                 <div class="logo-text">
                     <p>&copy 2023 - Hardware & Cia</p>

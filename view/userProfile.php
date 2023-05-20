@@ -1,3 +1,9 @@
+<!--include do css-->
+<?php 
+include_once 'view\estilos\reset.css';
+include_once 'view\estilos\estilos.css';
+include_once 'view\estilos\userProfile.css';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
   <head>
@@ -46,58 +52,71 @@
     />
   </head>
   <body>
+    
+    <!--Sessão php-->
+    <?php
+        include_once 'model\Cliente.php';
+        if(!isset($_SESSION))
+        {
+            session_start();
+        }
+    ?>
     <main>
       <div class="content-profile">
         <h1>Informações de Usuário</h1>
-        <form action="GET">
+        <form action="controller\ClienteController.php">
           <div class="row">
 
+            <div class="IdUser form-group col-12 col-md-6">
+              <label>Nome: <input type="hidden" value ="<?php echo unserialize($_SESSION['Cliente'])->getId();?>"></input></label>
+            </div>
+
             <div class="nameUser form-group col-12 col-md-6">
-              <label>Nome: <input disabled value ="{NOME DO USUÁRIO}"></input></label>
+              <label>Nome: <input disabled value ="<?php echo unserialize($_SESSION['Cliente'])->getNome();?>"></input></label>
             </div>
 
             <div class="lastNameUser form-group col-12 col-md-6">
-              <label>Sobrenome: <input disabled value ="{SOBRENOME DO USUÁRIO}"></inp></label>
+              <label>Sobrenome: <input disabled value ="<?php echo unserialize($_SESSION['Cliente'])->getSobrenome();?>"></inp></label>
             </div>
 
             <div class="dataUser form-group col-12 col-md-6">
-              <label>Data de Nascimento: <input type="date" disabled value ="{DATA DE NASCIMENTO DO USUÁRIO}"></inp></label>
+              <label>Data de Nascimento: <input type="date" disabled value ="<?php echo unserialize($_SESSION['Cliente'])->getDatanascimento();?>"></inp></label>
             </div>
             
             <div class="telUser form-group col-12 col-md-6">
-              <label>Telefone: <input disabled value ="{TELEFONE DO USUÁRIO}"></inp></label>
+              <label>Telefone: <input disabled value ="<?php echo unserialize($_SESSION['Cliente'])->getTelefone();?>"></inp></label>
             </div>
       
             <div class="cpfUser form-group col-md-6 col-12">
-              <label>CPF/CNPJ: <input disabled value ="{CPF DO USUÁRIO}"></inp></label>
+              <label>CPF/CNPJ: <input disabled value ="<?php echo unserialize($_SESSION['Cliente'])->getCpf_cnpj();?>"></inp></label>
             </div>
             
             <div class="emailUser form-group col-md-6 col-12">
-              <label>Email: <input disabled value ="{Email DO USUÁRIO}"></inp></label>
+              <label>Email: <input disabled value ="<?php echo unserialize($_SESSION['Cliente'])->getEmail();?>"></inp></label>
             </div>
 
             <div class="ruaUser form-group col-md-6 col-12">
-              <label>Rua: <input disabled value ="{RUA DO USUÁRIO}"></inp></label>
+              <label>Rua: <input disabled value ="<?php echo unserialize($_SESSION['Cliente'])->getRua();?>"></inp></label>
             </div>
 
             <div class="numeroCasaUser form-group col-md-6 col-12">
-              <label>N°: <input disabled value ="{N° DO USUÁRIO}"></inp></label>
+              <label>N°: <input disabled value ="<?php echo unserialize($_SESSION['Cliente'])->getNumero();?>"></inp></label>
             </div>
 
             <div class="bairroUser form-group col-md-6 col-12">
-              <label>Bairro: <input disabled value ="{BAIRRO DO USUÁRIO}"></inp></label>
+              <label>Bairro: <input disabled value ="<?php echo unserialize($_SESSION['Cliente'])->getBairro();?>"></inp></label>
             </div>
             
             <div class="cidadeUser form-group col-md-6 col-12">
-              <label>Cidade: <input disabled value ="{CIDADE DO USUÁRIO}"></inp></label>
+              <label>Cidade: <input disabled value ="<?php echo unserialize($_SESSION['Cliente'])->getCidade();?>"></inp></label>
             </div>
 
             <div class="estadoUser form-group col-md-6 col-12">
-              <label>Estado: <input disabled value ="{ESTADO DO USUÁRIO}"></inp></label>
+              <label>Estado: <input disabled value ="<?php echo unserialize($_SESSION['Cliente'])->getEstado();?>"></inp></label>
             </div>
 
             <div class="cepUser form-group col-md-6 col-12">
-              <label>CEP: <input disabled value ="{CEP DO USUÁRIO}"></inp></label>
+              <label>CEP: <input disabled value ="<?php echo unserialize($_SESSION['Cliente'])->getCep();?>"></inp></label>
             </div>
 
             <div class="buttons">

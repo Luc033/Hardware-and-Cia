@@ -1,3 +1,8 @@
+<!--include do css-->
+<?php 
+include_once 'view\estilos\reset.css';
+include_once 'view\estilos\estilos.css';
+?>
 <!DOCTYPE html>
 <html lang="pt-br">
 
