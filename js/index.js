@@ -29,7 +29,7 @@ const produtos = [
   {
     id: 2,
     imageURL: "celular-sansung.jpg",
-    name: "Celular Sansung A70",
+    name: "Celular Samsung A70",
     price: 2199.90
   },
   {
@@ -38,6 +38,61 @@ const produtos = [
     name: "Notebook Dell I5 11th",
     price: 3490.99
   },
+  {
+    id: 4,
+    imageURL: "gabinete-gamer.jpg",
+    name: "Gabinete Rise",
+    price: "279,99"
+  },
+  {
+    id: 5,
+    imageURL: "geforce.jpg",
+    name: "NVIDIA Geforce RTX3060",
+    price: "2259,99"
+  },
+  {
+    id: 6,
+    imageURL: "mouse-redragon.jpg",
+    name: "Mouse Redragon Cobra",
+    price: "96,99"
+  },
+  {
+    id: 7,
+    imageURL: "cadeira-gamer.jpg",
+    name: "Cadeira Gamer Fox Racer",
+    price: "1089,90"
+  },
+  {
+    id: 8,
+    imageURL: "teclado-hyperx.jpg",
+    name: "Teclado Mecânico",
+    price: "199,99"
+  },
+  {
+    id: 9,
+    imageURL: "som-logitech.jpg",
+    name: "Som Multimidia Logitech Z607",
+    price: "599,99"
+  },
+  {
+    id: 10,
+    imageURL: "mousepad.jpg",
+    name: "Mousepad Husky Black Avalanche",
+    price: "34,99"
+  },
+  {
+    id: 11,
+    imageURL: "ram-kingston.jpg",
+    name: "Memória Kingston Fury Beast 8GB",
+    price: "149,99"
+  },
+  {
+    id: 12,
+    imageURL: "fonte.jpg",
+    name: "Fonte Redragon RGPS, 600W",
+    price: "149,99"
+  },
+  
 ]
  
 // Exibindo os produtos individuais 

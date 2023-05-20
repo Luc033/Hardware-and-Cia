@@ -726,6 +726,16 @@ form .h1-login {
 }
 
 
+.carrinho-main{
+  background-image: radial-gradient(circle, var(--beje-color) 0%, var(--yellow-color) 1000%);
+  border-radius: 5px;
+  box-shadow: 0px 0px 5px 0px rgba(0, 0, 0, 0.58) ;4
+}
+.carrinho-main > h1{
+  color: var(--dark-blue-color);
+  text-shadow: 1px 1px 5px rgba(0, 0, 0, 0.582);
+}
+
 /* media querie para tablets */
 @media (max-width: 992px) {
   .search-header .inp-search-nav {

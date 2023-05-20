@@ -1,0 +1,111 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- reset incluído-->
+    <link rel="stylesheet" href="estilos/reset.css">
+
+    <!-- css -->
+    <link rel="stylesheet" href="estilos/style.css">
+
+    <!-- BootStrap Css -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+
+    <!-- Bootstrap js -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.3/font/bootstrap-icons.css">
+    
+
+    <!-- FONT-FAMILY-->
+    <!-- Poppins -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat:wght@100&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:wght@100&display=swap"
+        rel="stylesheet">
+
+    <!-- Roboto -->
+    <link
+        href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Favicon -->
+    <link rel="shortcut icon" href="imagens/favicon.png" type="image/x-icon">
+
+    <title>Hardware & CIA</title>
+</head>
+
+<body>
+    <!-- NAVBAR--> 
+    <header class="header-principal">
+        <nav class="nav-header">
+            <div class="logo-img">
+                <a href="index.html">
+                    <img class="logo-header" src="imagens/logo-sombra.png" alt="Logo E-commerce">
+                </a>
+            </div>
+            <ul class="dropd-logado">
+                <li class="dropli"><i class="icon-navbar bi bi-person-circle"></i><strong><!-- AQUI ENTRA O PHP ALTERANDO PARA O NOME DO USUÁRIO --><label for="">Conta</label></strong></li>
+                <ul class="dropd-content">
+                    <li><a href="#"><i class="icon-subnavbar bi bi-cart-fill icon-list-header"></i>Carrinho</a></li>
+                    <li><a href="#"><i class="icon-subnavbar bi bi-box-seam-fill icon-list-header"></i>Pedidos</a></li>
+                    <li><a href="#"><i class="icon-subnavbar bi bi-x-circle-fill icon-list-header"></i>Sair</a></li>
+                </ul>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <div class="carrinho-main container col-xs-12 text-center">
+            <h1>Meu carrinho <i class="bi bi-cart"> </i></h1>
+            <div></div>
+        </div>
+    </main>
+
+    <footer>
+        <div id="social-area" class="social">
+            <div class="container">
+                <h2>Nos acompanhe em nossas redes sociais</h2>
+                <div class="logo">
+                    <a href="#">
+                        <i class="bi bi-github"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-instagram"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-facebook"></i>
+                    </a>
+                    <a href="#">
+                        <i class="bi bi-youtube"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="footer" id="footer-area">
+            <div class="container-md container-fluid logo-footer">
+                <div class="logo-img">
+                    <img src="imagens/logo-sombra.png" alt="logo e-commerce">
+                </div>
+                <div class="logo-text">
+                    <p>&copy 2023 - Hardware & Cia</p>
+                </div>
+                <div class="info-footer">
+                    <p><strong>CNPJ:</strong> xx.xxx.xxx/xxxx-xx</p>
+                    <p><strong>E-mail:</strong> Hardware&Cia@gmail.com</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="js/index.js"></script>
+</body>
+
+</html>
