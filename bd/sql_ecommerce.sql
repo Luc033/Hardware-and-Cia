@@ -218,3 +218,7 @@ CREATE PROCEDURE gerar_relatorio_semanal()
         END $$
 
 DELIMITER ;
+
+INSERT INTO funcionario (idFuncionario, nomeFunc, sobrenomeFunc, emailFunc, senhaFunc) values (1478, "teste", "funcionario", "testefunc@gmail.com", 1234);
+
+INSERT INTO administrador (idAdm, nomeAdm, sobrenomeAdm , emailAdm, senhaAdm) values (12345, "adm", "teste", "admteste@gmail.com", 1234);
