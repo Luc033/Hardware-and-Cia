@@ -42,6 +42,10 @@
 </head>
 
 <body>
+    <!--inicia sessão-->
+   <?php
+        session_start();
+   ?>
     <!-- NAVBAR--> 
     <header class="header-principal">
         <nav class="nav-header">
@@ -51,7 +55,7 @@
                 </a>
             </div>
             <ul class="dropd-logado">
-                <li class="dropli"><i class="icon-navbar bi bi-person-circle"></i><strong><!-- AQUI ENTRA O PHP ALTERANDO PARA O NOME DO USUÁRIO --><label for="">Conta</label></strong></li>
+                <li class="dropli"><i class="icon-navbar bi bi-person-circle"></i><strong><!--<?php// echo $_SESSION['idCliente']->$this->nome;?>--><label for="">Conta</label></strong></li>
                 <ul class="dropd-content">
                     <li><a href="#"><i class="icon-subnavbar bi bi-cart-fill icon-list-header"></i>Carrinho</a></li>
                     <li><a href="#"><i class="icon-subnavbar bi bi-box-seam-fill icon-list-header"></i>Pedidos</a></li>
