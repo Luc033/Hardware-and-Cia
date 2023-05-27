@@ -86,7 +86,7 @@
                 <ul class="dropd-content">
                     <li><a href="#"><i class="icon-subnavbar bi bi-cart-fill icon-list-header"></i>Carrinho</a></li>
                     <li><a href="#"><i class="icon-subnavbar bi bi-box-seam-fill icon-list-header"></i>Pedidos</a></li>
-                    <li><a href="login.html"><i class="icon-subnavbar bi bi-x-circle-fill icon-list-header"></i>Sair</a></li>
+                    <li><a href="index.html"><i class="icon-subnavbar bi bi-x-circle-fill icon-list-header"></i>Sair</a></li>
                 </ul>
             </ul>
         </nav>

@@ -51,6 +51,35 @@
   </head>
 
   <body>
+      <!--inicia sessão-->
+   <?php
+        session_start();
+       
+        // Verifica se o idCliente está presente na sessão
+        if (!isset($_SESSION["idFuncionario"])) {
+        // Redireciona para a página de login, pois o idCliente não está definido na sessão
+        header("Location: login func.html");
+        exit();
+        }    
+        
+        //conexão com bd
+        require 'ConectBD.php';
+
+        // Obtém o idCliente da sessão
+        $idFuncionario = $_SESSION["idFuncionario"];
+
+        // Consulta para obter o nome do cliente
+        $sql = "SELECT nomeFunc FROM funcionario WHERE idFuncionario = '$idFuncionario'";
+        $resultado = $conn->query($sql);
+
+        if ($resultado->num_rows === 1) {
+            $row = $resultado->fetch_assoc();
+            $nomeFuncionario = $row["nomeFunc"];
+        } else {
+            // O idCliente não foi encontrado no banco de dados
+            $nomeFuncionario = "Nome não encontrado";
+        }
+   ?>
     <!-- NAVBAR-->
     <header class="header-principal">
       <nav class="nav-header">
@@ -67,9 +96,9 @@
           <li class="dropli">
             <i class="icon-navbar bi bi-person-circle"></i
             ><strong
-              ><!-- AQUI ENTRA O PHP ALTERANDO PARA O NOME DO USUÁRIO --><label
+              ><?php echo $nomeFuncionario;?><label
                 for=""
-                >Conta</label
+                ></label
               ></strong
             >
           </li>
@@ -83,7 +112,7 @@
               </a>
             </li>
             <li>
-              <a href="#"
+              <a href="index.html"
                 ><i
                   class="icon-subnavbar bi bi-x-circle-fill icon-list-header"
                 ></i

@@ -51,6 +51,36 @@
   </head>
 
   <body>
+      <!--inicia sessão-->
+   <?php
+        session_start();
+       
+        // Verifica se o idCliente está presente na sessão
+        if (!isset($_SESSION["idAdm"])) {
+        // Redireciona para a página de login, pois o idCliente não está definido na sessão
+        header("Location: login adm.html");
+        exit();
+        }    
+        
+        //conexão com bd
+        require 'ConectBD.php';
+
+        // Obtém o idCliente da sessão
+        $idAdm = $_SESSION["idAdm"];
+
+        // Consulta para obter o nome do cliente
+        $sql = "SELECT nomeAdm FROM administrador WHERE idAdm = '$idAdm'";
+        $resultado = $conn->query($sql);
+
+        if ($resultado->num_rows === 1) {
+            $row = $resultado->fetch_assoc();
+            $nomeAdministrador = $row["nomeAdm"];
+        } else {
+            // O idCliente não foi encontrado no banco de dados
+            $nomeAdministrador = "Nome não encontrado";
+        }
+   ?>
+  
     <!-- NAVBAR-->
 
     <header class="header-principal">
@@ -68,9 +98,9 @@
             <li class="dropli">
                 <i class="icon-navbar bi bi-person-circle"></i
                 ><strong
-                ><!-- AQUI ENTRA O PHP ALTERANDO PARA O NOME DO USUÁRIO --><label
+                ><?php echo $nomeAdministrador;?><label
                     for=""
-                    >Conta</label
+                    ></label
                 ></strong
                 >
             </li>
@@ -84,7 +114,7 @@
                 </a>
                 </li>
                 <li>
-                <a href="#"
+                <a href="index.html"
                     ><i
                     class="icon-subnavbar bi bi-x-circle-fill icon-list-header"
                     ></i
