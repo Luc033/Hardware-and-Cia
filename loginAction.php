@@ -16,23 +16,23 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $cliente = "SELECT * FROM cliente WHERE email = '$email' AND senha = '$senha'";
     $resultado = $conn->query($cliente);
 
-    // Verifica se a consulta retornou algum resultado
     if ($resultado->num_rows === 1) {
-        // Email e senha válidos
-
-        // Inicie a sessão e armazene o id do cliente
+        $row = $resultado->fetch_assoc();
+        $idCliente = $row['idCliente'];
+        
+        // Inicie a sessão
         $_SESSION["idCliente"] = $idCliente;
 
-        // Redireciona para a página de index logado
+        // Redirecione para a página de index logado
         header("Location: index-logado.php");
         exit(); // Certifique-se de sair do script após o redirecionamento
     } else {
-        // Email ou senha inválidos
-        echo "Email e/ou Senha inválidos";
-    }
+            // Email ou senha inválidos
+            echo "Email e/ou Senha inválidos";
+        }
 
-    // Feche a conexão com o banco de dados
-    $conn->close();
-}
+        // Feche a conexão com o banco de dados
+        $conn->close();
+    }
 
 ?>

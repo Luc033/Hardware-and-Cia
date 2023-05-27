@@ -45,6 +45,31 @@
     <!--inicia sessão-->
    <?php
         session_start();
+       
+        // Verifica se o idCliente está presente na sessão
+        if (!isset($_SESSION["idCliente"])) {
+        // Redireciona para a página de login, pois o idCliente não está definido na sessão
+        header("Location: login.html");
+        exit();
+        }    
+        
+        //conexão com bd
+        require 'ConectBD.php';
+
+        // Obtém o idCliente da sessão
+        $idCliente = $_SESSION["idCliente"];
+
+        // Consulta para obter o nome do cliente
+        $sql = "SELECT nome FROM cliente WHERE idCliente = '$idCliente'";
+        $resultado = $conn->query($sql);
+
+        if ($resultado->num_rows === 1) {
+            $row = $resultado->fetch_assoc();
+            $nomeCliente = $row["nome"];
+        } else {
+            // O idCliente não foi encontrado no banco de dados
+            $nomeCliente = "Nome não encontrado";
+        }
    ?>
     <!-- NAVBAR--> 
     <header class="header-principal">
@@ -55,11 +80,13 @@
                 </a>
             </div>
             <ul class="dropd-logado">
-                <li class="dropli"><i class="icon-navbar bi bi-person-circle"></i><strong><!--<?php// echo $_SESSION['idCliente']->$this->nome;?>--><label for="">Conta</label></strong></li>
+                <li class="dropli"><i class="icon-navbar bi bi-person-circle"></i><strong>
+                    <?php echo $nomeCliente;?>
+                <label for=""></label></strong></li>
                 <ul class="dropd-content">
                     <li><a href="#"><i class="icon-subnavbar bi bi-cart-fill icon-list-header"></i>Carrinho</a></li>
                     <li><a href="#"><i class="icon-subnavbar bi bi-box-seam-fill icon-list-header"></i>Pedidos</a></li>
-                    <li><a href="#"><i class="icon-subnavbar bi bi-x-circle-fill icon-list-header"></i>Sair</a></li>
+                    <li><a href="login.html"><i class="icon-subnavbar bi bi-x-circle-fill icon-list-header"></i>Sair</a></li>
                 </ul>
             </ul>
         </nav>

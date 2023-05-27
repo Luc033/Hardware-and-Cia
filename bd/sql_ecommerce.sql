@@ -35,7 +35,7 @@ create table cliente(
 	idCliente int auto_increment primary key,
     nome varchar(45) not null,
     sobrenome varchar(45) not null,
-    dataNascimento date not null unique,
+    dataNascimento date not null,
     rua varchar(45) not null,
     numero varchar(6) not null,
     complemento varchar(45),
