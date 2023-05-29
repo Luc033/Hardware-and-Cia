@@ -222,3 +222,5 @@ DELIMITER ;
 INSERT INTO funcionario (idFuncionario, nomeFunc, sobrenomeFunc, emailFunc, senhaFunc) values (1478, "teste", "funcionario", "testefunc@gmail.com", 1234);
 
 INSERT INTO administrador (idAdm, nomeAdm, sobrenomeAdm , emailAdm, senhaAdm) values (12345, "adm", "teste", "admteste@gmail.com", 1234);
+
+INSERT INTO cliente (idCliente, nome, sobrenome, dataNascimento, rua, numero, complemento, bairro, cidade, estado, cep, cpf_cnpj, telefone, email, senha, pagamento_idPagamento) values (1,'Marcio', 'Souza', '2023-10-05','Pedro Daniel de Souza', '3', 'casa','Limoeiro', 'São Paulo', 'SP', '11777888', '11122233345', '11937576788', 'marcio.souza@gmail.com', '1234', NULL );
